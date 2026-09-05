@@ -1,0 +1,78 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        padding: 6px 10px;
+
+        border-radius: 999px;
+
+        background: rgba(81, 103, 141, 0.1);
+
+        color: var(--color-dusk-blue);
+
+        text-decoration: none;
+
+        font-size: 0.8rem;
+        font-weight: 500;
+
+        transition:
+            background-color 160ms ease,
+            color 160ms ease;
+
+        &:hover {
+            background: var(--color-dusk-blue);
+            color: var(--color-light);
+        }
+    }
+}
+
+.tag__icon {
+    width: 14px;
+    height: 14px;
+
+    display: block;
+    flex-shrink: 0;
+
+    background-color: currentColor;
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    transform-origin: center;
+
+    &--developer {
+        mask-image: url('/icons/code.svg');
+        -webkit-mask-image: url('/icons/code.svg');
+    }
+
+    &--designer {
+        mask-image: url('/icons/design.svg');
+        -webkit-mask-image: url('/icons/design.svg');
+    }
+
+    &--researcher {
+        mask-image: url('/icons/research.svg');
+        -webkit-mask-image: url('/icons/research.svg');
+    }
+
+    &--overcomplicator {
+        mask-image: url('/icons/spark.svg');
+        -webkit-mask-image: url('/icons/spark.svg');
+    }
+}

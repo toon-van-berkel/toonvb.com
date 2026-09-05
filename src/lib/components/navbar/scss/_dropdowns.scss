@@ -1,0 +1,87 @@
+.nav {
+// DROPDOWN
+	&__dropdown {
+		position: absolute;
+
+		top: calc(100% + 10px);
+		left: 0;
+
+		min-width: 220px;
+
+		margin: 0;
+		padding: 8px;
+
+		list-style: none;
+
+		background: rgba(9, 20, 34, 0.94);
+
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+
+		border-radius: 12px;
+
+		opacity: 0;
+		visibility: hidden;
+
+		pointer-events: none;
+
+		transform: translateY(-6px);
+
+		transition:
+			opacity 150ms ease,
+			transform 150ms ease,
+			visibility 150ms ease;
+
+
+		// INVISIBLE BRIDGE
+		// Prevents dropdown from closing when moving
+		// mouse across the 10px gap.
+		&::before {
+			content: "";
+
+			position: absolute;
+
+			left: 0;
+			right: 0;
+			top: -10px;
+
+			height: 10px;
+		}
+
+
+		> li {
+			width: 100%;
+
+			> a {
+				display: flex;
+				align-items: center;
+
+				width: 100%;
+
+				padding: 10px 12px;
+
+				border-radius: 7px;
+
+				white-space: nowrap;
+
+				font-size: 0.9rem;
+				font-weight: 500;
+
+				text-decoration: none;
+
+				color: rgba(255, 255, 255, 0.78);
+
+				transition:
+					color 150ms ease,
+					background-color 150ms ease;
+
+				&:hover {
+					color: white;
+
+					background: rgba(255, 255, 255, 0.08);
+				}
+			}
+		}
+	}
+}
+

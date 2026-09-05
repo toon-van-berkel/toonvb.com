@@ -1,0 +1,36 @@
+.nav {
+	position: fixed;
+
+	top: 20px;
+	left: 50%;
+
+	transform: translateX(-50%);
+
+	z-index: 1000;
+
+	width: calc(100% - 40px);
+	max-width: 1400px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	gap: 32px;
+
+	padding: 10px 14px;
+
+	background: rgba(9, 20, 34, 0.72);
+
+	backdrop-filter:
+		blur(10px)
+		saturate(115%);
+
+	-webkit-backdrop-filter:
+		blur(10px)
+		saturate(115%);
+
+	border-radius: 14px;
+
+
+	}
+

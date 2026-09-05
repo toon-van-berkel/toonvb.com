@@ -1,0 +1,84 @@
+.nav {
+// ITEM
+	&__item {
+		position: relative;
+
+		list-style: none;
+
+		&-header {
+			display: flex;
+			align-items: center;
+
+			border-radius: 8px;
+
+			transition: background-color 150ms ease;
+
+			> a {
+				display: flex;
+				align-items: center;
+
+				padding: 10px 4px 10px 14px;
+
+				text-decoration: none;
+
+				font-size: 0.95rem;
+				font-weight: 500;
+
+				color: rgba(255, 255, 255, 0.88);
+
+				transition: color 150ms ease;
+			}
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.08);
+
+				> a {
+					color: white;
+				}
+
+				.nav__dropdown-toggle {
+					color: white;
+				}
+			}
+		}
+
+
+		// OPEN BY HOVER
+		&--dropdown:hover > .nav__dropdown,
+
+		// OPEN BY KEYBOARD
+		&--dropdown:focus-within > .nav__dropdown,
+
+		// OPEN BY CLICK
+		&--open > .nav__dropdown {
+			opacity: 1;
+			visibility: visible;
+
+			transform: translateY(0);
+
+			pointer-events: auto;
+		}
+
+
+		// ROTATE ARROW ON HOVER
+		&--dropdown:hover
+			> .nav__item-header
+			> .nav__dropdown-toggle
+			> span,
+
+		// KEYBOARD
+		&--dropdown:focus-within
+			> .nav__item-header
+			> .nav__dropdown-toggle
+			> span,
+
+		// CLICK
+		&--open
+			> .nav__item-header
+			> .nav__dropdown-toggle
+			> span {
+			transform: rotate(225deg);
+		}
+	}
+}
+

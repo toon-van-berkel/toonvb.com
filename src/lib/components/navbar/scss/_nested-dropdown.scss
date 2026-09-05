@@ -1,0 +1,59 @@
+.nav {
+// NESTED DROPDOWN
+	&__item--nested {
+		> .nav__item-header {
+			width: 100%;
+
+			> a {
+				flex: 1;
+
+				padding: 10px 12px;
+			}
+		}
+
+		> .nav__dropdown {
+			top: -8px;
+
+			left: 100%;
+
+			margin-left: 8px;
+
+
+			// Bridge between first and second dropdown
+			&::before {
+				top: 0;
+				left: -8px;
+
+				width: 8px;
+				height: 100%;
+			}
+		}
+
+
+		// Nested arrow points RIGHT by default
+		> .nav__item-header
+			> .nav__dropdown-toggle
+			> span {
+			transform: rotate(-45deg);
+		}
+
+
+		&:hover
+			> .nav__item-header
+			> .nav__dropdown-toggle
+			> span,
+
+		&:focus-within
+			> .nav__item-header
+			> .nav__dropdown-toggle
+			> span,
+
+		&.nav__item--open
+			> .nav__item-header
+			> .nav__dropdown-toggle
+			> span {
+			transform: rotate(135deg);
+		}
+	}
+}
+
