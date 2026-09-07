@@ -1,3 +1,7 @@
+<script lang="ts">
+    import Icon from '$lib/components/icon/Icon.svelte';
+</script>
+
 <section class="section" aria-labelledby="research-title">
     <header class="section__header">
         <p class="section__eyebrow">Research</p>
@@ -15,10 +19,7 @@
     <div class="grid grid--3">
         <!-- 01 -->
         <article class="card">
-            <span
-                class="card__icon card__icon--sustainability"
-                aria-hidden="true"
-            ></span>
+            <Icon name="sustainability" />
             <span class="card__number">01</span>
 
             <p class="card__meta">
@@ -41,10 +42,7 @@
 
         <!-- 02 -->
         <article class="card">
-            <span
-                class="card__icon card__icon--visual"
-                aria-hidden="true"
-            ></span>
+            <Icon name="visual" />
             <span class="card__number">02</span>
 
             <p class="card__meta">
@@ -67,10 +65,7 @@
 
         <!-- 03 -->
         <article class="card">
-            <span
-                class="card__icon card__icon--usability"
-                aria-hidden="true"
-            ></span>
+            <Icon name="usability" />
             <span class="card__number">03</span>
 
             <p class="card__meta">

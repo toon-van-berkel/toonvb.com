@@ -5,23 +5,6 @@
 }
 
 @media (max-width: 700px) {
-    .collection {
-        .panel {
-            &.split,
-            &.split--reverse {
-                grid-template-columns: 1fr;
-            }
-
-            .media {
-                display: none;
-            }
-
-            .stack {
-                width: 100%;
-            }
-        }
-    }
-
     .principle-card {
         padding: 28px;
 

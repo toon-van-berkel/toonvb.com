@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 80px;
+
+    background: #091422;
+    color: var(--color-light);
+
+    &__inner {
+        display: grid;
+        grid-template-columns: minmax(260px, 1.1fr) 2fr;
+        gap: clamp(60px, 8vw, 140px);
+
+        width: min(100% - 48px, 1400px);
+        margin-inline: auto;
+        padding: 80px 0 64px;
+    }
+}
+

@@ -1,0 +1,24 @@
+.collection {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.panel {
+	padding: clamp(32px, 4vw, 56px);
+	background: rgba(81, 103, 141, 0.06);
+	border: 1px solid rgba(81, 103, 141, 0.18);
+	border-radius: 24px;
+}
+
+@media (max-width: 700px) {
+	.collection .panel {
+		&.split,
+		&.split--reverse {
+			grid-template-columns: 1fr;
+		}
+
+		.media { display: none; }
+		.stack { width: 100%; }
+	}
+}

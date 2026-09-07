@@ -1,0 +1,43 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        padding: 6px 10px;
+
+        border-radius: 999px;
+
+        background: rgba(81, 103, 141, 0.1);
+
+        color: var(--color-dusk-blue);
+
+        text-decoration: none;
+
+        font-size: 0.8rem;
+        font-weight: 500;
+
+        transition:
+            background-color 160ms ease,
+            color 160ms ease;
+
+        &:hover {
+            background: var(--color-dusk-blue);
+            color: var(--color-light);
+        }
+    }
+}
+
+
+
+
+

@@ -1,5 +1,6 @@
 <script lang="ts">
     import { url } from '$lib/utils/url';
+    import Icon from '$lib/components/icon/Icon.svelte';
 </script>
 
 <section
@@ -26,10 +27,7 @@
 
     <div class="grid grid--3">
         <article class="card">
-            <span
-                class="card__icon card__icon--experiment"
-                aria-hidden="true"
-            ></span>
+            <Icon name="experiment" />
 
             <span
                 class="card__number"
@@ -61,10 +59,7 @@
         </article>
 
         <article class="card">
-            <span
-                class="card__icon card__icon--prototype"
-                aria-hidden="true"
-            ></span>
+            <Icon name="prototype" />
 
             <span
                 class="card__number"
@@ -96,10 +91,7 @@
         </article>
 
         <article class="card">
-            <span
-                class="card__icon card__icon--idea"
-                aria-hidden="true"
-            ></span>
+            <Icon name="idea" />
 
             <span
                 class="card__number"

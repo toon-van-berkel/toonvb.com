@@ -1,0 +1,48 @@
+.footer {
+&__navigation {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 40px;
+    }
+
+    &__column {
+        h2 {
+            margin-bottom: 18px;
+
+            color: var(--color-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        a {
+            color: rgba(247, 248, 248, 0.62);
+
+            font-size: 0.9rem;
+            text-decoration: none;
+
+            transition:
+                color 160ms ease,
+                transform 160ms ease;
+
+            &:hover {
+                color: var(--color-primary);
+
+                transform: translateX(3px);
+            }
+        }
+    }
+}
+

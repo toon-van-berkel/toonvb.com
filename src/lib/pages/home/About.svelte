@@ -1,5 +1,6 @@
 <script lang="ts">
     import { url } from '$lib/utils/url';
+    import Icon from '$lib/components/icon/Icon.svelte';
 </script>
 
 <section
@@ -43,10 +44,7 @@
                 >
                     <li>
                         <a href={url('/projects')}>
-                            <span
-                                class="tag__icon tag__icon--developer"
-                                aria-hidden="true"
-                            ></span>
+                            <Icon name="developer" variant="tag" />
 
                             Developer
                         </a>
@@ -54,10 +52,7 @@
 
                     <li>
                         <a href={url('/projects')}>
-                            <span
-                                class="tag__icon tag__icon--designer"
-                                aria-hidden="true"
-                            ></span>
+                            <Icon name="designer" variant="tag" />
 
                             Designer
                         </a>
@@ -65,10 +60,7 @@
 
                     <li>
                         <a href={url('/research')}>
-                            <span
-                                class="tag__icon tag__icon--researcher"
-                                aria-hidden="true"
-                            ></span>
+                            <Icon name="researcher" variant="tag" />
 
                             Researcher
                         </a>
@@ -76,10 +68,7 @@
 
                     <li>
                         <a href={url('/about')}>
-                            <span
-                                class="tag__icon tag__icon--overcomplicator"
-                                aria-hidden="true"
-                            ></span>
+                            <Icon name="overcomplicator" variant="tag" />
 
                             Professional project overcomplicator
                         </a>

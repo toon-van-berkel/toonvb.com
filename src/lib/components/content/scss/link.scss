@@ -1,0 +1,40 @@
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+
+	width: fit-content;
+
+	color: var(--color-dusk-blue);
+	text-decoration: none;
+	font-weight: 600;
+
+	transition:
+		color 160ms ease,
+		gap 160ms ease;
+
+	&:hover {
+		color: var(--color-primary);
+		gap: 12px;
+		text-decoration: underline;
+	}
+}
+
+.more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: gap 200ms ease;
+
+    &:hover {
+        gap: 14px;
+    }
+}
+

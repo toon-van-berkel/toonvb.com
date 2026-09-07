@@ -1,0 +1,34 @@
+.footer {
+&__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+
+        width: min(100% - 48px, 1400px);
+        margin-inline: auto;
+        padding: 24px 0;
+
+        border-top: 1px solid rgba(247, 248, 248, 0.1);
+
+        color: rgba(247, 248, 248, 0.4);
+        font-size: 0.75rem;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            flex-shrink: 0;
+
+            color: inherit;
+            text-decoration: none;
+
+            transition: color 160ms ease;
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+}

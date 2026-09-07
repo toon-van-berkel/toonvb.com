@@ -1,6 +1,6 @@
 <script lang="ts">
-    import SectionHeader from '$lib/components/SectionHeader.svelte';
-    import PrincipleGrid from '$lib/components/PrincipleGrid.svelte';
+    import SectionHeader from '$lib/components/layout/SectionHeader.svelte';
+    import PrincipleGrid from '$lib/components/cards/PrincipleGrid.svelte';
     import { copy } from '$lib/i18n';
 </script>
 

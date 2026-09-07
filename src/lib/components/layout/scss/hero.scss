@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #143457;
+    overflow: hidden;
+
+    > img {
+        position: relative;
+        z-index: 1;
+
+        max-height: 941px;
+        max-width: 1672px;
+        width: 100%;
+        display: block;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+
+        z-index: 2;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 50px;
+
+        background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(247, 248, 248, 0.15) 25%,
+            rgba(247, 248, 248, 0.55) 55%,
+            rgba(247, 248, 248, 0.9) 85%,
+            #F7F8F8 100%
+        );
+
+        pointer-events: none;
+    }
+}
+

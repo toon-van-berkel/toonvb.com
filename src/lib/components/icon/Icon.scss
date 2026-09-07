@@ -1,0 +1,42 @@
+.icon {
+	display: block;
+	flex-shrink: 0;
+	background-color: currentColor;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: contain;
+
+	&--card {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 12px;
+		color: var(--color-light);
+	}
+
+	&--tag {
+		width: 14px;
+		height: 14px;
+	}
+
+	&--visual { mask-image: url('/icons/eye.svg'); -webkit-mask-image: url('/icons/eye.svg'); }
+	&--usability { mask-image: url('/icons/cursor-click.svg'); -webkit-mask-image: url('/icons/cursor-click.svg'); }
+	&--performance { mask-image: url('/icons/dashboard.svg'); -webkit-mask-image: url('/icons/dashboard.svg'); }
+	&--accessibility { mask-image: url('/icons/accessibility.svg'); -webkit-mask-image: url('/icons/accessibility.svg'); }
+	&--sustainability { mask-image: url('/icons/sustainability.svg'); -webkit-mask-image: url('/icons/sustainability.svg'); }
+	&--experiment { mask-image: url('/icons/experiment.svg'); -webkit-mask-image: url('/icons/experiment.svg'); }
+	&--prototype { mask-image: url('/icons/prototype.svg'); -webkit-mask-image: url('/icons/prototype.svg'); }
+	&--idea { mask-image: url('/icons/lightbulb.svg'); -webkit-mask-image: url('/icons/lightbulb.svg'); }
+	&--developer { mask-image: url('/icons/code.svg'); -webkit-mask-image: url('/icons/code.svg'); }
+	&--designer { mask-image: url('/icons/design.svg'); -webkit-mask-image: url('/icons/design.svg'); }
+	&--researcher { mask-image: url('/icons/research.svg'); -webkit-mask-image: url('/icons/research.svg'); }
+	&--overcomplicator { mask-image: url('/icons/spark.svg'); -webkit-mask-image: url('/icons/spark.svg'); }
+	&--sv { mask-image: url('/icons/svelte.svg'); -webkit-mask-image: url('/icons/svelte.svg'); }
+	&--ts { mask-image: url('/icons/typescript.svg'); -webkit-mask-image: url('/icons/typescript.svg'); }
+	&--personal { mask-image: url('/icons/personal.svg'); -webkit-mask-image: url('/icons/personal.svg'); }
+	&--web { mask-image: url('/icons/web.svg'); -webkit-mask-image: url('/icons/web.svg'); }
+	&--responsive { mask-image: url('/icons/responsive.svg'); -webkit-mask-image: url('/icons/responsive.svg'); }
+	&--client { mask-image: url('/icons/client.svg'); -webkit-mask-image: url('/icons/client.svg'); }
+}

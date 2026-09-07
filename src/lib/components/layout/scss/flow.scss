@@ -1,0 +1,12 @@
+.flow {
+	display: flex;
+	flex-direction: column;
+}
+.flow--projects > .split {
+	padding-block: 40px;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid rgba(81, 103, 141, 0.18);
+	}
+}
+

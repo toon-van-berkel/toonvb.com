@@ -1,0 +1,50 @@
+.footer {
+&__brand {
+        max-width: 360px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        width: fit-content;
+
+        color: var(--color-light);
+        text-decoration: none;
+
+        img {
+            width: 52px;
+            height: 52px;
+        }
+
+        span {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+    }
+
+    &__tagline {
+        margin-top: 28px;
+
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.45;
+    }
+
+    &__description {
+        margin-top: 10px;
+
+        color: rgba(247, 248, 248, 0.68);
+        line-height: 1.6;
+    }
+
+    &__credit {
+        margin-top: 28px;
+
+        color: rgba(247, 248, 248, 0.45);
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+

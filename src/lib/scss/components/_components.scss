@@ -1,20 +1,18 @@
-@use './hero';
-@use './section';
+@use '../../components/layout/scss/hero';
+@use '../../components/layout/scss/section';
+@use '../../components/layout/scss/split';
+@use '../../components/layout/scss/stack';
+@use '../../components/layout/scss/flow';
+@use '../../components/cards/scss/grid';
+@use '../../components/cards/scss/card';
+@use '../../components/cards/scss/number';
+@use '../../components/content/scss/link';
+@use '../../components/content/scss/links';
+@use '../../components/content/scss/tags';
+@use '../../components/content/scss/title';
+@use '../../components/media/scss/media';
+@use '../../components/media/scss/caption';
+@use '../../components/media/scss/logo';
+@use '../../components/media/scss/showcase';
+@use '../../components/stats/scss/stats';
 
-@use './grid';
-@use './card';
-@use './link';
-@use './split';
-@use './stack';
-@use './number';
-@use './title';
-@use './tags';
-@use './links';
-@use './media';
-@use './caption';
-@use './logo';
-@use './flow';
-@use './showcase';
-@use './stats';
-
-@use './footer';

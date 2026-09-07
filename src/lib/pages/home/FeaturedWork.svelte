@@ -1,3 +1,8 @@
+<script lang="ts">
+    import './FeaturedWork.scss';
+    import Icon from '$lib/components/icon/Icon.svelte';
+</script>
+
 <section class="section" aria-labelledby="featured-work-title">
     <header class="section__header">
         <p class="section__eyebrow">Featured work</p>
@@ -23,16 +28,19 @@
                 <ul class="tags" aria-label="Project technologies">
                     <li>
                         <a href="/projects?filter=sveltekit">
+                            <Icon name="sv" variant="tag" />
                             SvelteKit
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=typescript">
+                            <Icon name="ts" variant="tag" />
                             TypeScript
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=personal">
+                            <Icon name="personal" variant="tag" />
                             Personal project
                         </a>
                     </li>
@@ -111,16 +119,19 @@
                 <ul class="tags" aria-label="Project characteristics">
                     <li>
                         <a href="/projects?filter=web-development">
+                            <Icon name="web" variant="tag" />
                             Web development
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=responsive-design">
+                            <Icon name="responsive" variant="tag" />
                             Responsive design
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=client-project">
+                            <Icon name="client" variant="tag" />
                             Client project
                         </a>
                     </li>
