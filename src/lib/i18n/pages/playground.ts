@@ -1,0 +1,4 @@
+export const playgroundPage = {
+    en: { eyebrow: 'Playground', title: 'Ideas do not have to behave here.', lead: 'Not every idea needs a business case, client or elaborate project plan. Some things exist simply because I wanted to know what would happen if I built them.', status: 'Nothing documented here yet', categories: ['Experiments', 'Prototypes', 'Games & interaction', 'Hardware & IoT', 'Weird ideas'] },
+    nl: { eyebrow: 'Speeltuin', title: 'Hier hoeven ideeën zich niet te gedragen.', lead: 'Niet ieder idee hoeft een businesscase, opdrachtgever of uitgebreid projectplan te hebben. Sommige dingen bestaan gewoon omdat ik wilde weten wat er zou gebeuren als ik ze bouwde.', status: 'Hier staat nog niets gedocumenteerd', categories: ['Experimenten', 'Prototypes', 'Games & interactie', 'Hardware & IoT', 'Vreemde ideeën'] }
+} as const;

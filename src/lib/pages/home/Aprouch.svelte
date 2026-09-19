@@ -5,6 +5,10 @@
 </script>
 
 <section class="section" aria-labelledby="design-principles-title">
-    <SectionHeader {...$copy.home.approach} id="design-principles-title" />
+    <SectionHeader 
+        {...$copy.home.approach}
+        banner={true}
+        id="design-principles-title"
+    />
     <PrincipleGrid principles={$copy.home.principles} />
 </section>

@@ -1,17 +1,17 @@
 <script lang="ts">
     import './FeaturedWork.scss';
     import Icon from '$lib/components/icon/Icon.svelte';
+    import { copy } from '$lib/i18n';
 </script>
 
 <section class="section" aria-labelledby="featured-work-title">
     <header class="section__header">
-        <p class="section__eyebrow">Featured work</p>
+        <p class="section__eyebrow">{$copy.home.featured.eyebrow}</p>
         <h2 class="section__title" id="featured-work-title">
-            A few things I've built.
+            {$copy.home.featured.title}
         </h2>
         <p class="section__lead">
-            Some projects are still in progress, others are constantly evolving —
-            but these are already live or presentable.
+            {$copy.home.featured.lead}
         </p>
     </header>
     <div class="collection">
@@ -23,25 +23,25 @@
                 <span class="number" aria-hidden="true">01</span>
                 <h3 class="title">DND-Portal</h3>
                 <p class="description">
-                    A custom platform for campaigns, characters, lore and worldbuilding.
+                    {$copy.home.featured.dndDescription}
                 </p>
                 <ul class="tags" aria-label="Project technologies">
                     <li>
                         <a href="/projects?filter=sveltekit">
                             <Icon name="sv" variant="tag" />
-                            SvelteKit
+                            {$copy.home.featured.dndTags[0]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=typescript">
                             <Icon name="ts" variant="tag" />
-                            TypeScript
+                            {$copy.home.featured.dndTags[1]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=personal">
                             <Icon name="personal" variant="tag" />
-                            Personal project
+                            {$copy.home.featured.dndTags[2]}
                         </a>
                     </li>
                 </ul>
@@ -53,7 +53,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Visit website
+                            {$copy.home.featured.visit}
                             <span aria-hidden="true">↗</span>
                         </a>
                     </li>
@@ -62,7 +62,7 @@
                             class="text-link"
                             href="/projects/dnd-portal"
                         >
-                            Story behind the development
+                            {$copy.home.featured.story}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -71,7 +71,7 @@
                             class="text-link"
                             href="/research?project=dnd-portal"
                         >
-                            Related research
+                            {$copy.home.featured.related}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -85,7 +85,7 @@
                 <figcaption class="caption">
                     <div class="caption__meta">
                         <span>
-                            Screenshot of
+                            {$copy.home.featured.screenshotOf}
                             <a
                                 href="https://www.dnd-portal.com"
                                 target="_blank"
@@ -95,12 +95,11 @@
                             </a>
                         </span>
                         <time datetime="2026-09-04">
-                            04 September 2026
+                            {$copy.home.featured.date}
                         </time>
                     </div>
                     <p>
-                        The DND-Portal interface showing the main campaign and
-                        worldbuilding environment.
+                        {$copy.home.featured.dndCaption}
                     </p>
                 </figcaption>
             </figure>
@@ -113,26 +112,25 @@
                 <span class="number" aria-hidden="true">02</span>
                 <h3 class="title">Antarctica SC</h3>
                 <p class="description">
-                    A public-facing website created for Antarctica SC, focused on presenting
-                    information clearly through a modern and accessible web experience.
+                    {$copy.home.featured.antarcticaDescription}
                 </p>
                 <ul class="tags" aria-label="Project characteristics">
                     <li>
                         <a href="/projects?filter=web-development">
                             <Icon name="web" variant="tag" />
-                            Web development
+                            {$copy.home.featured.antarcticaTags[0]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=responsive-design">
                             <Icon name="responsive" variant="tag" />
-                            Responsive design
+                            {$copy.home.featured.antarcticaTags[1]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=client-project">
                             <Icon name="client" variant="tag" />
-                            Client project
+                            {$copy.home.featured.antarcticaTags[2]}
                         </a>
                     </li>
                 </ul>
@@ -144,7 +142,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Visit website
+                            {$copy.home.featured.visit}
                             <span aria-hidden="true">↗</span>
                         </a>
                     </li>
@@ -153,7 +151,7 @@
                             class="text-link"
                             href="/projects/antarctica-sc"
                         >
-                            Story behind the development
+                            {$copy.home.featured.story}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -162,7 +160,7 @@
                             class="text-link"
                             href="/research?project=antarctica-sc"
                         >
-                            Related research
+                            {$copy.home.featured.related}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -176,7 +174,7 @@
                 <figcaption class="caption">
                     <div class="caption__meta">
                         <span>
-                            Screenshot of
+                            {$copy.home.featured.screenshotOf}
                             <a
                                 href="http://antarctica-sc.nl/"
                                 target="_blank"
@@ -186,12 +184,11 @@
                             </a>
                         </span>
                         <time datetime="2026-09-04">
-                            04 September 2026
+                            {$copy.home.featured.date}
                         </time>
                     </div>
                     <p>
-                        The Antarctica SC website, showing the public-facing interface
-                        and visual identity of the project.
+                        {$copy.home.featured.antarcticaCaption}
                     </p>
                 </figcaption>
             </figure>

@@ -9,7 +9,7 @@
 <main>
     <section class="section">
         <SectionHeader eyebrow={contact[$locale].eyebrow} title={contact[$locale].title} lead={contact[$locale].lead} />
-        <div class="panel">
+        <div class="panel stack">
             <p class="description">{contact[$locale].emailLabel}</p>
             <a class="text-link" href="mailto:{contact[$locale].email}">{contact[$locale].email}<span aria-hidden="true">↗</span></a>
         </div>

@@ -47,7 +47,7 @@
 	<button
 		class="nav__toggle"
 		type="button"
-		aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+		aria-label={menuOpen ? $copy.common.close : $copy.common.open}
 		aria-expanded={menuOpen}
 		onclick={toggleMenu}
 	>
@@ -64,7 +64,7 @@
 		>
 			<div class="nav__item-header">
 				<a href="/projects" onclick={closeMenu}>
-					Projects
+					{$copy.navigation.projects}
 				</a>
 
 				<button
@@ -81,37 +81,37 @@
 			<ul class="nav__dropdown">
 				<li>
 					<a href="/projects/web" onclick={closeMenu}>
-						Web
+						{$copy.navigation.web}
 					</a>
 				</li>
 
 				<li>
 					<a href="/projects/applications" onclick={closeMenu}>
-						Applications &amp; Tools
+						{$copy.navigation.applications}
 					</a>
 				</li>
 
 				<li>
 					<a href="/projects/games" onclick={closeMenu}>
-						Games
+						{$copy.navigation.games}
 					</a>
 				</li>
 
 				<li>
 					<a href="/projects/dnd-portal" onclick={closeMenu}>
-						D&amp;D Portal
+						{$copy.navigation.dnd}
 					</a>
 				</li>
 
 				<li>
 					<a href="/projects/school" onclick={closeMenu}>
-						School projects
+						{$copy.navigation.school}
 					</a>
 				</li>
 
 				<li>
 					<a href="/projects" onclick={closeMenu}>
-						All projects
+						{$copy.navigation.allProjects}
 					</a>
 				</li>
 			</ul>
@@ -125,7 +125,7 @@
 		>
 			<div class="nav__item-header">
 				<a href="/research" onclick={closeMenu}>
-					Research
+					{$copy.navigation.research}
 				</a>
 
 				<button
@@ -142,37 +142,37 @@
 			<ul class="nav__dropdown">
 				<li>
 					<a href="/research/visual-design" onclick={closeMenu}>
-						Visual design
+						{$copy.navigation.visual}
 					</a>
 				</li>
 
 				<li>
 					<a href="/research/usability" onclick={closeMenu}>
-						Usability
+						{$copy.navigation.usability}
 					</a>
 				</li>
 
 				<li>
 					<a href="/research/web-performance" onclick={closeMenu}>
-						Web performance
+						{$copy.navigation.performance}
 					</a>
 				</li>
 
 				<li>
 					<a href="/research/accessibility" onclick={closeMenu}>
-						Accessibility
+						{$copy.navigation.accessibility}
 					</a>
 				</li>
 
 				<li>
 					<a href="/research/school" onclick={closeMenu}>
-						School research
+						{$copy.navigation.schoolResearch}
 					</a>
 				</li>
 
 				<li>
 					<a href="/research" onclick={closeMenu}>
-						All research
+						{$copy.navigation.allResearch}
 					</a>
 				</li>
 			</ul>
@@ -186,7 +186,7 @@
 		>
 			<div class="nav__item-header">
 				<a href="/about" onclick={closeMenu}>
-					About
+					{$copy.navigation.about}
 				</a>
 
 				<button
@@ -203,7 +203,7 @@
 			<ul class="nav__dropdown">
 				<li>
 					<a href="/about" onclick={closeMenu}>
-						About me
+						{$copy.navigation.aboutMe}
 					</a>
 				</li>
 
@@ -220,7 +220,7 @@
 				>
 					<div class="nav__item-header">
 						<a href="/about/interests" onclick={closeMenu}>
-							Interests
+							{$copy.navigation.interests}
 						</a>
 
 						<button
@@ -237,19 +237,19 @@
 					<ul class="nav__dropdown">
 						<li>
 							<a href="/about/interests/games" onclick={closeMenu}>
-								Games
+								{$copy.navigation.games}
 							</a>
 						</li>
 
 						<li>
 							<a href="/about/interests/music" onclick={closeMenu}>
-								Music
+								{$copy.navigation.music}
 							</a>
 						</li>
 
 						<li>
 							<a href="/about/interests/anime" onclick={closeMenu}>
-								Anime
+								{$copy.navigation.anime}
 							</a>
 						</li>
 					</ul>
@@ -257,13 +257,13 @@
 
 				<li>
 					<a href="/about/travel" onclick={closeMenu}>
-						Travel
+						{$copy.navigation.travel}
 					</a>
 				</li>
 
 				<li>
 					<a href="/about/photography" onclick={closeMenu}>
-						Photography
+						{$copy.navigation.photography}
 					</a>
 				</li>
 			</ul>
@@ -277,7 +277,7 @@
 		>
 			<div class="nav__item-header">
 				<a href="/playground" onclick={closeMenu}>
-					Playground
+					{$copy.navigation.playground}
 				</a>
 
 				<button
@@ -294,25 +294,25 @@
 			<ul class="nav__dropdown">
 				<li>
 					<a href="/playground/experiments" onclick={closeMenu}>
-						Experiments
+						{$copy.navigation.experiments}
 					</a>
 				</li>
 
 				<li>
 					<a href="/playground/prototypes" onclick={closeMenu}>
-						Prototypes
+						{$copy.navigation.prototypes}
 					</a>
 				</li>
 
 				<li>
 					<a href="/playground/ideas" onclick={closeMenu}>
-						Weird ideas
+						{$copy.navigation.ideas}
 					</a>
 				</li>
 
 				<li>
 					<a href="/playground/tools" onclick={closeMenu}>
-						Small tools
+						{$copy.navigation.tools}
 					</a>
 				</li>
 			</ul>

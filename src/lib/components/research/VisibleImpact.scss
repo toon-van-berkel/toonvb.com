@@ -1,0 +1,42 @@
+.visible-impact-page .section__header--no-banner { margin-top: calc(var(--navbar-height, 64px) + 30px); }
+.visible-impact-page .section:first-child { padding-bottom: clamp(48px, 8vw, 120px); }
+.visible-impact-page .section__title { max-width: 1000px; }
+.visible-impact-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 28px; color: var(--color-baltic-blue); }
+.visible-impact-question { padding: clamp(28px, 6vw, 80px); background: rgba(180, 186, 200, .2); border: 1px solid rgba(81, 103, 141, .18); border-radius: 24px; }
+.visible-impact-question h2 { max-width: 1100px; margin: 14px 0 0; font-size: clamp(2rem, 4vw, 4.5rem); line-height: 1; letter-spacing: -.045em; }
+.visible-impact-question p:last-child { max-width: 760px; margin-top: 28px; }
+.visible-impact-goals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.visible-impact-goal { padding-top: 18px; border-top: 1px solid rgba(81, 103, 141, .3); }
+.visible-impact-goal span { color: var(--color-primary); font-size: 2.4rem; font-weight: 600; }
+.visible-impact-goal h3 { margin: 18px 0 10px; font-size: clamp(1.6rem, 3vw, 2.8rem); }
+.visible-impact-prototype { align-items: start; }
+.visible-impact-prototype .media { min-height: 300px; }
+.visible-impact-prototype img { display: block; width: 100%; min-height: 300px; object-fit: cover; border-radius: 14px; background: rgba(180, 186, 200, .24); }
+.visible-impact-data { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.visible-impact-data__item { padding-top: 16px; border-top: 1px solid rgba(81, 103, 141, .3); }
+.visible-impact-data__item strong { display: block; margin-bottom: 8px; color: var(--color-dark); }
+.visible-impact-data__item span { color: var(--color-baltic-blue); }
+.interview-insights { display: flex; flex-direction: column; gap: 0; }
+.interview-insight { display: grid; grid-template-columns: 80px minmax(180px, .8fr) 1.2fr; gap: 28px; padding: 34px 0; border-top: 1px solid rgba(81, 103, 141, .24); }
+.interview-insight:last-child { border-bottom: 1px solid rgba(81, 103, 141, .24); }
+.interview-insight--reverse { background: rgba(180, 186, 200, .1); padding-inline: 24px; }
+.interview-insight h3 { margin: 0 0 10px; font-size: clamp(1.4rem, 2.5vw, 2.4rem); line-height: 1; }
+.interview-insight blockquote { grid-column: 2 / -1; margin: 0; color: var(--color-dusk-blue); font-size: 1.2rem; font-style: italic; }
+.interview-insight__highlight { grid-column: 3; margin: 0; color: var(--color-primary); font-weight: 600; }
+.visible-impact-results { overflow-x: auto; }
+.visible-impact-results table { width: 100%; border-collapse: collapse; text-align: left; }
+.visible-impact-results th, .visible-impact-results td { padding: 16px; border-top: 1px solid rgba(81, 103, 141, .25); }
+.visible-impact-results th { color: var(--color-primary); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+.visible-impact-highlight { margin-top: 28px; padding: 28px; color: var(--color-light); background: var(--color-dark); border-radius: 16px; }
+.visible-impact-highlight strong { color: var(--color-primary); }
+.visible-impact-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.visible-impact-list li { display: grid; grid-template-columns: 90px 1fr 1.2fr; gap: 24px; padding: 28px 0; border-top: 1px solid rgba(81, 103, 141, .24); }
+.visible-impact-list li:last-child { border-bottom: 1px solid rgba(81, 103, 141, .24); }
+.visible-impact-list__number { color: var(--color-primary); font-size: 2.2rem; font-weight: 600; }
+.visible-impact-list h3 { margin: 0; font-size: clamp(1.3rem, 2.4vw, 2.2rem); line-height: 1; }
+.visible-impact-conclusion { padding: clamp(32px, 7vw, 88px); color: var(--color-light); background: var(--color-dark); border-radius: 24px; }
+.visible-impact-conclusion .section__eyebrow { color: var(--color-primary); }
+.visible-impact-conclusion h2 { max-width: 900px; margin: 16px 0; color: var(--color-light); font-size: clamp(2.8rem, 6vw, 6rem); line-height: .95; letter-spacing: -.05em; }
+.visible-impact-conclusion p { max-width: 720px; color: var(--color-pale-slate); }
+.visible-impact-conclusion__highlight { color: var(--color-primary) !important; font-size: 1.4rem; font-weight: 600; }
+@media (max-width: 800px) { .visible-impact-goals, .visible-impact-data { grid-template-columns: 1fr; } .interview-insight, .visible-impact-list li { grid-template-columns: 55px 1fr; gap: 16px; } .interview-insight > .description, .interview-insight blockquote, .interview-insight__highlight, .visible-impact-list li > p { grid-column: 2; } }

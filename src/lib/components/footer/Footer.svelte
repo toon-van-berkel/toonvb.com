@@ -1,6 +1,7 @@
 <script lang="ts">
     import './Footer.scss';
     import { url } from '$lib/utils/url';
+    import { copy } from '$lib/i18n';
 </script>
 
 <footer class="footer">
@@ -20,15 +21,15 @@
             </a>
 
             <p class="footer__tagline">
-                Developer, designer and professional project overcomplicator.
+                {$copy.footer.tagline}
             </p>
 
             <p class="footer__description">
-                I turn curiosity into things that actually work.
+                {$copy.footer.description}
             </p>
 
             <p class="footer__credit">
-                Designed, developed and maintained by Toon van Berkel.
+                {$copy.footer.credit}
             </p>
         </div>
 
@@ -37,93 +38,73 @@
             aria-label="Footer navigation"
         >
             <div class="footer__column">
-                <h2>Browse</h2>
+                <h2>{$copy.footer.browse}</h2>
 
                 <ul>
                     <li>
                         <a href={url('/projects')}>
-                            Projects
+                            {$copy.navigation.projects}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/research')}>
-                            Research
+                            {$copy.navigation.research}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/playground')}>
-                            Playground
+                            {$copy.navigation.playground}
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer__column">
-                <h2>About</h2>
+                <h2>{$copy.footer.about}</h2>
 
                 <ul>
                     <li>
                         <a href={url('/about')}>
-                            About me
+                            {$copy.footer.aboutMe}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/about/cv')}>
-                            CV
+                            {$copy.navigation.cv}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/about/interests')}>
-                            Interests
+                            {$copy.footer.interests}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/contact')}>
-                            Contact
+                            {$copy.footer.contact}
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer__column">
-                <h2>Elsewhere</h2>
+                <h2>{$copy.footer.elsewhere}</h2>
 
                 <ul>
                     <li>
-                        <a
-                            href="https://github.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub ↗
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LinkedIn ↗
-                        </a>
-                    </li>
-
-                    <li>
                         <a href="mailto:contact@toonvb.com">
-                            Email ↗
+                            {$copy.footer.email} ↗
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer__column">
-                <h2>Project</h2>
+                <h2>{$copy.footer.project}</h2>
 
                 <ul>
                     <li>
@@ -134,37 +115,37 @@
 
                     <li>
                         <a href={url('/roadmap')}>
-                            Roadmap
+                            {$copy.footer.roadmap}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/accessibility')}>
-                            Accessibility
+                            {$copy.footer.accessibility}
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer__column">
-                <h2>Legal</h2>
+                <h2>{$copy.footer.legal}</h2>
 
                 <ul>
                     <li>
                         <a href={url('/privacy')}>
-                            Privacy
+                            {$copy.footer.privacy}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/cookies')}>
-                            Cookies
+                            {$copy.footer.cookies}
                         </a>
                     </li>
 
                     <li>
                         <a href={url('/terms')}>
-                            Terms
+                            {$copy.footer.terms}
                         </a>
                     </li>
                 </ul>
@@ -175,12 +156,11 @@
     <div class="footer__bottom">
         <p>
             © 2023–{new Date().getFullYear()} Toon van Berkel.
-            Original website content is protected unless otherwise stated.
+            {$copy.footer.copyright}
         </p>
 
         <a href="#top">
-            Back to top ↑
+            {$copy.footer.back} ↑
         </a>
     </div>
 </footer>
-

@@ -11,10 +11,9 @@
 </script>
 
 <label class="language-switcher">
-    <span aria-hidden="true">{selected.flag}</span>
     <select value={$locale} onchange={(event) => setLocale((event.currentTarget as HTMLSelectElement).value as Locale)} aria-label="Choose language">
         {#each languages as language}
-            <option value={language.value}>{language.label}</option>
+            <option value={language.value}>{language.flag}</option>
         {/each}
     </select>
 </label>

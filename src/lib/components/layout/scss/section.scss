@@ -1,42 +1,44 @@
 .section {
-	width: min(100% - 48px, 1400px);
-	margin-inline: auto;
-	padding-block: 30px;
+    width: min(100% - 48px, 1400px);
+    margin-inline: auto;
+    padding-block: 20px;
 
-	&__header {
-		margin-bottom: 20px;
-	}
-	&__eyebrow {
-		margin: 0 0 10px;
+    &__header {
+        margin-bottom: 16px;
+    }
 
-		font-size: 0.8rem;
-		font-weight: 600;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
+    &__header--no-banner {
+        margin-top: calc(var(--navbar-height, 64px) + 16px);
+        margin-bottom: 16px;
+    }
 
-		color: var(--color-primary);
-	}
-	&__title {
-		margin: 0;
+    &__eyebrow {
+        margin: 0 0 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-primary);
+    }
 
-		font-size: clamp(2.5rem, 6vw, 5.5rem);
-		font-weight: 600;
-		line-height: 0.95;
-		letter-spacing: -0.045em;
+    &__title {
+        margin: 0;
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -0.045em;
+        color: var(--color-dark);
+    }
 
-		color: var(--color-dark);
-	}
-	&__lead {
-		max-width: 900px;
-		margin: 15px 0 0;
+    &__lead {
+        max-width: 900px;
+        margin: 12px 0 0;
+        font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+        line-height: 1.6;
+        color: var(--color-baltic-blue);
+    }
 
-		font-size: clamp(1.1rem, 1.6vw, 1.4rem);
-		line-height: 1.6;
-
-		color: var(--color-baltic-blue);
-	}
-	&__footer {
-		margin-top: 10px;
-	}
+    &__footer {
+        margin-top: 10px;
+    }
 }
-
