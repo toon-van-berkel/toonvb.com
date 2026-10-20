@@ -37,7 +37,7 @@
     .experiments-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; align-items: start; }
     .experiment-card { display: flex; width: min(100%, 420px); min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid rgba(42,76,123,.18); border-radius: 15px; background: var(--color-baltic-blue); color: var(--color-light); text-decoration: none; transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
     .experiment-card:hover, .experiment-card:focus-visible { transform: translateY(-3px); background: var(--color-dusk-blue); box-shadow: 0 12px 24px rgba(23,43,70,.14); outline: 3px solid var(--color-primary); outline-offset: 3px; }
-    .experiment-card__preview { aspect-ratio: 16 / 9; padding: 20px; background: #172b46; }
+    .experiment-card__preview { aspect-ratio: 2 / 1; padding: 20px; background: #172b46; }
     .experiment-card__preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .experiment-card__body { display: flex; min-height: 260px; flex-direction: column; padding: 22px; }
     .experiment-card__heading { display: flex; align-items: center; gap: 8px; color: var(--color-primary-hover); font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
