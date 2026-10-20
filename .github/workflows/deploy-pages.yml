@@ -35,6 +35,8 @@ jobs:
         run: pnpm check
       - name: Build
         run: pnpm build
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
