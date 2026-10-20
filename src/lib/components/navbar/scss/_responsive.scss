@@ -53,7 +53,7 @@
 // MOBILE
 @media (max-width: 800px) {
 	.nav {
-		top: env(safe-area-inset-top);
+		top: 0;
 
 		width: 100%;
 
@@ -63,11 +63,11 @@
 
 		gap: 0;
 
-		min-height: 64px;
-		max-height: calc(100dvh - env(safe-area-inset-top) - 12px);
-		padding: 8px 16px;
+		min-height: calc(64px + env(safe-area-inset-top));
+		max-height: none;
+		padding: calc(8px + env(safe-area-inset-top)) 16px 8px;
 		border-radius: 0;
-		overflow-y: auto;
+		overflow: visible;
 
 
 		&__brand {
@@ -103,6 +103,9 @@
 			width: 100%;
 
 			display: none;
+			min-height: 0;
+			overflow-y: auto;
+			overscroll-behavior: contain;
 
 			flex-direction: column;
 			align-items: stretch;
@@ -246,6 +249,19 @@
 
 		// NAV OPEN
 		&--open {
+			height: 100dvh;
+			max-height: 100dvh;
+			overflow: hidden;
+			grid-template-rows: auto minmax(0, 1fr) auto;
+
+			&::before {
+				bottom: 0;
+				clip-path: none;
+				background: rgb(9, 20, 34);
+				backdrop-filter: none;
+				-webkit-backdrop-filter: none;
+			}
+
 			.nav__links {
 				display: flex;
 			}
