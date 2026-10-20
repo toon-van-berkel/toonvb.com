@@ -2,7 +2,7 @@ import type { PlaygroundPageDefinition } from '$lib/types/page';
 
 export const page = {
     items: [
-        { title: 'Experiments', description: 'A place for small investigations into interactions, visuals and technical possibilities.', status: 'Empty for now' },
+        { title: 'Experiments', description: 'A place for small investigations into interactions, visuals and technical possibilities.', status: 'Empty for now', href: '/playground/experiments' },
         { title: 'Prototypes', description: 'A place for ideas that need to become tangible before I can decide whether they work.', status: 'Empty for now' },
         { title: 'Weird ideas', description: 'A place for questions that take an unexpected turn and become more elaborate than planned.', status: 'Empty for now' },
         { title: 'Small tools', description: 'A place for useful little things that remove friction from a workflow or solve a specific problem.', status: 'Volgt later' },

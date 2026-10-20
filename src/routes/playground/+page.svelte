@@ -30,7 +30,7 @@
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
                 {#if item.tags}<ul class="playground-tags">{#each item.tags as tag}<li><Icon name={tag.icon} variant="tag" />{tag.label}</li>{/each}</ul>{/if}
-                {#if item.href}<span class="playground-card__link">{ $locale === 'nl' ? 'Bekijk experiment' : 'View experiment' } →</span>{/if}
+                {#if item.href}<span class="playground-card__link">{ $locale === 'nl' ? (item.image ? 'Bekijk experiment' : 'Bekijk experimenten') : (item.image ? 'View experiment' : 'View experiments') } →</span>{/if}
             </svelte:element>
         {/each}
     </div>

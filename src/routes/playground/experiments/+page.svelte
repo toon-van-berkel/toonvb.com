@@ -5,7 +5,7 @@
     import { page as playgroundNl } from '$lib/pages/playground/playground-nl';
 
     const pages = { en: playgroundEn, nl: playgroundNl } as const;
-    const experiments = $derived(pages[$locale].items.filter((item) => item.href));
+    const experiments = $derived(pages[$locale].items.filter((item) => item.href && item.image));
 </script>
 
 <svelte:head>

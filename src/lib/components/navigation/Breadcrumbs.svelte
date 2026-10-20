@@ -16,21 +16,21 @@
     }
 </script>
 
-<nav class="breadcrumbs" aria-label={navigationLabel}>
-    {#if !isHome}
+{#if !isHome}
+    <nav class="breadcrumbs" aria-label={navigationLabel}>
         <a class="breadcrumbs__back" href={breadcrumbs.length > 1 ? breadcrumbs.at(-2)!.href : '/'} onclick={goBack}>
             <span aria-hidden="true">←</span> <span>{backLabel}</span>
         </a>
-    {/if}
-    <ol>
-        {#each breadcrumbs as crumb, index (crumb.href)}
-            <li>
-                {#if index > 0}<span class="breadcrumbs__separator" aria-hidden="true">/</span>{/if}
-                <a href={crumb.href} aria-current={index === breadcrumbs.length - 1 ? 'page' : undefined}>{crumb.label}</a>
-            </li>
-        {/each}
-    </ol>
-</nav>
+        <ol>
+            {#each breadcrumbs as crumb, index (crumb.href)}
+                <li>
+                    {#if index > 0}<span class="breadcrumbs__separator" aria-hidden="true">/</span>{/if}
+                    <a href={crumb.href} aria-current={index === breadcrumbs.length - 1 ? 'page' : undefined}>{crumb.label}</a>
+                </li>
+            {/each}
+        </ol>
+    </nav>
+{/if}
 
 <style>
     .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; max-width: 1400px; margin: 0 auto; padding: calc(var(--page-content-offset) + 12px) max(24px, calc((100vw - 1400px) / 2)) 0; color: var(--color-dusk-blue); font-size: .85rem; }
