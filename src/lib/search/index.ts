@@ -9,6 +9,8 @@ import { page as aboutEn } from '$lib/pages/about/about-en';
 import { page as aboutNl } from '$lib/pages/about/about-nl';
 import { page as contactEn } from '$lib/pages/contact/contact-en';
 import { page as contactNl } from '$lib/pages/contact/contact-nl';
+import { page as playgroundEn } from '$lib/pages/playground/playground-en';
+import { page as playgroundNl } from '$lib/pages/playground/playground-nl';
 
 export type SearchResultType = 'Page' | 'Project' | 'Research';
 
@@ -42,7 +44,7 @@ function pageEntries(locale: Locale): SearchEntry[] {
 		{ id: 'projects', href: '/projects', title: projects.header.title, description: projects.header.description ?? '', type: 'Page', keywords: ['projects', 'projecten', 'work'] },
 		{ id: 'research', href: '/research', title: research.header.title, description: research.header.description ?? '', type: 'Research', keywords: ['research', 'onderzoek', 'topics'] },
 		{ id: 'playground', href: '/playground', title: 'Playground', description: 'Experiments and prototypes.', type: 'Page', keywords: ['playground', 'experiments', 'prototypes'] },
-		{ id: 'parametric-screw', href: '/playground/experiments/parametric-screw', title: locale === 'en' ? 'A screw, built with code.' : 'Een schroef, gebouwd met code.', description: locale === 'en' ? 'A parametric OpenSCAD and 3D modelling experiment.' : 'Een parametrisch OpenSCAD- en 3D-modelexperiment.', type: 'Page', keywords: ['screw', 'schroef', 'openscad', '3d', 'parametric', 'parametrisch'] },
+		...((locale === 'en' ? playgroundEn : playgroundNl).items.filter((item) => item.href).map((item) => ({ id: 'parametric-screw', href: item.href!, title: item.title, description: item.description, type: 'Page' as const, keywords: ['screw', 'schroef', 'openscad', '3d', 'parametric', 'parametrisch'] }))),
 		{ id: 'mallorca-2026', href: '/about/travel/mallorca-2026', title: 'Mallorca 2026', description: locale === 'en' ? 'Places visited, walks taken and moments from a trip to Mallorca.' : 'Plekken, wandelingen en momenten van een reis naar Mallorca.', type: 'Page', keywords: ['mallorca', 'travel', 'vakantie', 'spain', 'majorca'] },
 		{ id: 'changelog', href: '/changelog', title: 'Changelog', description: 'Recent website updates.', type: 'Page', keywords: ['updates', 'release notes'] },
 		{ id: 'roadmap', href: '/roadmap', title: 'Roadmap', description: 'What is coming next.', type: 'Page', keywords: ['future', 'planning'] }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Parametric screw</title>
+  <desc id="desc">A technical preview illustration of a cylindrical screw with a hex socket and helical thread.</desc>
+  <defs><linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#b8d5eb"/><stop offset=".45" stop-color="#527da5"/><stop offset="1" stop-color="#1b3550"/></linearGradient><linearGradient id="head" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#d8e8f3"/><stop offset="1" stop-color="#476f94"/></linearGradient></defs>
+  <rect width="640" height="360" rx="18" fill="#172b46"/>
+  <g transform="translate(320 184) rotate(-18)">
+    <path d="M-205-38h330v76h-330z" fill="url(#metal)" stroke="#b8d5eb" stroke-width="3"/>
+    <path d="M-220-54h90c18 0 28 10 28 28v52c0 18-10 28-28 28h-90c-18 0-28-10-28-28v-52c0-18 10-28 28-28Z" fill="url(#head)" stroke="#d8e8f3" stroke-width="4"/>
+    <path d="M-177-18l24-14 24 14v28l-24 14-24-14Z" fill="#172b46" stroke="#0e2034" stroke-width="5"/>
+    <g fill="none" stroke="#d8e8f3" stroke-width="9" opacity=".9"><path d="M-128-38c24 18 24 58 48 76s24-58 48-76 24 58 48 76 24-58 48-76 24 58 48 76 24-58 48-76"/><path d="M-128-17c24 18 24 58 48 76s24-58 48-76 24 58 48 76 24-58 48-76 24 58 48 76 24-58 48-76" opacity=".38"/></g>
+    <path d="M125-38l48 0 24 38-24 38-48 0 18-38Z" fill="url(#metal)" stroke="#b8d5eb" stroke-width="3"/>
+  </g>
+</svg>

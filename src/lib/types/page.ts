@@ -56,6 +56,8 @@ export interface PlaygroundItem {
     description: string;
     status: string;
     href?: string;
+    image?: string;
+    imageAlt?: string;
     icon?: import('$lib/components/icon/Icon.svelte').IconName;
     tags?: readonly { label: string; icon: import('$lib/components/icon/Icon.svelte').IconName }[];
 }
