@@ -9,4 +9,17 @@
 
     --color-primary:        #2F9BFF;
     --color-primary-hover:  #5CB1FF;
+
+    --surface-shape-depth: 24px;
+    --surface-shape-transition: 12px;
+    --surface-shape-position: 68%;
+    --navbar-height: 76px;
+    --page-content-offset: calc(env(safe-area-inset-top) + var(--navbar-height) + var(--surface-shape-depth) + 8px);
+}
+
+@media (max-width: 800px) {
+    :root {
+        --surface-shape-depth: 18px;
+        --navbar-height: 64px;
+    }
 }

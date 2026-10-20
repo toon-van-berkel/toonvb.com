@@ -1,0 +1,35 @@
+.status-page {
+    min-height: 520px;
+
+    &__content {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+        gap: clamp(40px, 8vw, 120px);
+        align-items: center;
+        min-height: 520px;
+    }
+
+    &__copy { max-width: 720px; }
+    &__description { max-width: 680px; margin: 24px 0; color: var(--color-baltic-blue); font-size: 1.15rem; line-height: 1.6; }
+    &__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    &__visual { display: grid; place-items: center; }
+    &__window { width: min(100%, 280px); padding: 18px; border: 1px solid rgba(12, 12, 13, 0.12); border-radius: 16px; background: var(--color-pale-slate); box-shadow: 16px 16px 0 rgba(42, 76, 123, 0.12); }
+    &__window-bar { display: flex; gap: 6px; margin-bottom: 28px; span { width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary); &:nth-child(2) { opacity: .55; } &:nth-child(3) { opacity: .3; } } }
+    &__terminal { display: flex; align-items: center; gap: 10px; color: var(--color-dark); font-size: .9rem; font-weight: 600; }
+    &__terminal .icon { color: var(--color-primary); }
+    &__cursor { display: inline-block; width: 7px; height: 1em; margin-left: 5px; vertical-align: -.15em; background: var(--color-primary); animation: status-cursor 1s steps(2, jump-none) infinite; }
+    &__line { width: 86%; height: 7px; margin-top: 20px; border-radius: 999px; background: rgba(42, 76, 123, .2); animation: status-line 2.4s ease-in-out infinite alternate; &--short { width: 58%; margin-top: 14px; animation-delay: 300ms; } }
+}
+
+@keyframes status-cursor { 50% { opacity: 0; } }
+@keyframes status-line { from { opacity: .45; transform: scaleX(.72); transform-origin: left; } to { opacity: 1; transform: scaleX(1); transform-origin: left; } }
+
+@media (max-width: 800px) {
+    .status-page__content { grid-template-columns: 1fr; gap: 32px; min-height: 0; }
+    .status-page__visual { order: 2; }
+    .status-page__window { width: min(100%, 240px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .status-page__cursor, .status-page__line { animation: none; }
+}

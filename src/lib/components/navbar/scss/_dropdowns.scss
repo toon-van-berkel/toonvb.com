@@ -52,7 +52,17 @@
 		> li {
 			width: 100%;
 
-			> a {
+			&.nav__dropdown-separator {
+				height: 1px;
+				margin: 6px 12px;
+				width: auto;
+
+				background: rgba(255, 255, 255, 0.14);
+				pointer-events: none;
+			}
+
+			> a,
+			> span {
 				display: flex;
 				align-items: center;
 
@@ -75,7 +85,11 @@
 					color 150ms ease,
 					background-color 150ms ease;
 
-				&:hover {
+				&[aria-disabled='true'] {
+					cursor: default;
+				}
+
+				&:hover:not([aria-disabled='true']) {
 					color: white;
 
 					background: rgba(255, 255, 255, 0.08);

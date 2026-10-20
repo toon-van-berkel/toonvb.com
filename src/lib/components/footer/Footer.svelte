@@ -1,6 +1,7 @@
 <script lang="ts">
     import './Footer.scss';
     import { url } from '$lib/utils/url';
+    import LanguageSwitcher from '$lib/components/navbar/LanguageSwitcher.svelte';
 </script>
 
 <footer class="footer">
@@ -174,13 +175,16 @@
 
     <div class="footer__bottom">
         <p>
-            © 2023–{new Date().getFullYear()} Toon van Berkel.
+            © 2022–{new Date().getFullYear()} Toon van Berkel.
             Original website content is protected unless otherwise stated.
         </p>
 
-        <a href="#top">
-            Back to top ↑
-        </a>
+        <div class="footer__bottom-actions">
+            <LanguageSwitcher />
+            <a href="#top">
+                Back to top ↑
+            </a>
+        </div>
     </div>
 </footer>
 

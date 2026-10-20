@@ -1,0 +1,11 @@
+<script lang="ts">
+    import SectionHeader from '$lib/components/layout/SectionHeader.svelte';
+    import PrincipleGrid from '$lib/components/cards/PrincipleGrid.svelte';
+    import { copy } from '$lib/i18n';
+    import { reveal } from '$lib/utils/reveal';
+</script>
+
+<section use:reveal class="section" aria-labelledby="design-principles-title">
+    <SectionHeader {...$copy.home.approach} id="design-principles-title" />
+    <PrincipleGrid principles={$copy.home.principles} />
+</section>

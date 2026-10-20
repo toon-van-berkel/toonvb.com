@@ -1,15 +1,13 @@
 .nav {
 	position: fixed;
 
-	top: 20px;
-	left: 50%;
-
-	transform: translateX(-50%);
+	top: env(safe-area-inset-top);
+	left: 0;
 
 	z-index: 1000;
 
-	width: calc(100% - 40px);
-	max-width: 1400px;
+	width: 100%;
+	max-width: none;
 
 	display: flex;
 	align-items: center;
@@ -17,20 +15,34 @@
 
 	gap: 32px;
 
-	padding: 10px 14px;
+	padding: 15px max(24px, calc((100vw - 1400px) / 2));
 
-	background: rgba(9, 20, 34, 0.72);
+	background: transparent;
+	border-radius: 0;
+	overflow: visible;
 
-	backdrop-filter:
-		blur(10px)
-		saturate(115%);
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		right: 0;
+		bottom: calc(-1 * var(--surface-shape-depth));
+		left: 0;
+		background: rgba(9, 20, 34, 0.72);
+		backdrop-filter: blur(10px) saturate(115%);
+		-webkit-backdrop-filter: blur(10px) saturate(115%);
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% 100%,
+			calc(var(--surface-shape-position) + var(--surface-shape-transition)) 100%,
+			var(--surface-shape-position) calc(100% - var(--surface-shape-depth)),
+			0 calc(100% - var(--surface-shape-depth))
+		);
+		pointer-events: none;
+	}
 
-	-webkit-backdrop-filter:
-		blur(10px)
-		saturate(115%);
-
-	border-radius: 14px;
-
-
+	> * { position: relative; z-index: 1; }
 	}
 

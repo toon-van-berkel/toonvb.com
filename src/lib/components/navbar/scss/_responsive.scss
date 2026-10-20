@@ -3,7 +3,7 @@
 	.nav {
 		gap: 18px;
 
-		padding: 8px 12px;
+		padding: 8px 20px;
 
 		&__brand {
 			gap: 8px;
@@ -53,9 +53,9 @@
 // MOBILE
 @media (max-width: 800px) {
 	.nav {
-		top: 12px;
+		top: env(safe-area-inset-top);
 
-		width: calc(100% - 24px);
+		width: 100%;
 
 		display: grid;
 
@@ -63,29 +63,38 @@
 
 		gap: 0;
 
-		padding: 10px 12px;
-
-		border-radius: 12px;
+		min-height: 64px;
+		max-height: calc(100dvh - env(safe-area-inset-top) - 12px);
+		padding: 8px 16px;
+		border-radius: 0;
+		overflow-y: auto;
 
 
 		&__brand {
 			width: fit-content;
 
 			img {
-				width: 40px;
-				height: 40px;
+				width: 32px;
+				height: 32px;
 			}
 
-			span {
-				font-size: 0.95rem;
+			&-name {
+				display: none;
+			}
+
+			&-domain {
+				display: inline;
+				font-size: 1.08rem;
+				font-weight: 600;
 			}
 		}
 
 
 		&__toggle {
 			display: flex;
+			width: 44px;
+			height: 44px;
 		}
-
 
 		// MAIN LINKS MOBILE
 		&__links {
@@ -180,7 +189,8 @@
 				}
 
 
-				> li > a {
+				> li > a,
+				> li > span {
 					padding: 9px 12px;
 
 					font-size: 0.85rem;
@@ -228,7 +238,7 @@
 
 			margin-top: 8px;
 
-			padding: 12px 18px;
+			padding: 9px 18px;
 
 			text-align: center;
 		}
@@ -268,9 +278,7 @@
 @media (max-width: 480px) {
 	.nav {
 		&__brand {
-			span {
-				display: none;
-			}
+			gap: 8px;
 		}
 	}
 }

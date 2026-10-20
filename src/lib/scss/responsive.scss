@@ -16,11 +16,11 @@
 
 @media (max-width: 650px) {
 	.section {
-		width: min(100% - 32px, 1400px);
-		padding-block: 80px;
+		width: min(100% - 40px, 1400px);
+		padding-block: 24px;
 
 		&__header {
-			margin-bottom: 40px;
+			margin-bottom: 24px;
 		}
 	}
 
@@ -31,7 +31,15 @@
 	}
 
 	.card {
-		min-height: 280px;
+		min-height: 0;
+		padding: 22px 20px;
+	}
+}
+
+@media (max-width: 800px) {
+	body.nav-menu-open,
+	body.nav-search-open {
+		overflow: hidden;
 	}
 }
 

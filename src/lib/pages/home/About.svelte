@@ -1,9 +1,11 @@
 <script lang="ts">
     import { url } from '$lib/utils/url';
     import Icon from '$lib/components/icon/Icon.svelte';
+    import { reveal } from '$lib/utils/reveal';
 </script>
 
 <section
+    use:reveal
     class="section"
     aria-labelledby="about-title"
 >

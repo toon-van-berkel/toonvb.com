@@ -1,47 +1,53 @@
 <script lang="ts">
     import './FeaturedWork.scss';
     import Icon from '$lib/components/icon/Icon.svelte';
+    import { copy, locale } from '$lib/i18n';
+    import { getProject } from '$lib/pages/projects/lookup';
+    import { reveal } from '$lib/utils/reveal';
+
+    const dndPortal = $derived(getProject('dnd-portal', $locale)!);
+    const antarctica = $derived(getProject('antarctica-sc', $locale)!);
+
 </script>
 
-<section class="section" aria-labelledby="featured-work-title">
+<section use:reveal class="section" aria-labelledby="featured-work-title">
     <header class="section__header">
-        <p class="section__eyebrow">Featured work</p>
+        <p class="section__eyebrow">{$copy.home.featured.eyebrow}</p>
         <h2 class="section__title" id="featured-work-title">
-            A few things I've built.
+            {$copy.home.featured.title}
         </h2>
         <p class="section__lead">
-            Some projects are still in progress, others are constantly evolving —
-            but these are already live or presentable.
+            {$copy.home.featured.lead}
         </p>
     </header>
     <div class="collection">
         <article class="panel split">
             <div class="stack">
                 <div class="logo-mark">
-                    <img src="/logos/dnd-portal.svg" alt="DND-Portal logo" />
+                    <img src={dndPortal.logo} alt={dndPortal.title + ' logo'} />
                 </div>
                 <span class="number" aria-hidden="true">01</span>
-                <h3 class="title">DND-Portal</h3>
+                <h3 class="title">{dndPortal.title}</h3>
                 <p class="description">
-                    A custom platform for campaigns, characters, lore and worldbuilding.
+                    {dndPortal.summary}
                 </p>
                 <ul class="tags" aria-label="Project technologies">
                     <li>
                         <a href="/projects?filter=sveltekit">
                             <Icon name="sv" variant="tag" />
-                            SvelteKit
+                            {dndPortal.technologies[0]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=typescript">
                             <Icon name="ts" variant="tag" />
-                            TypeScript
+                            {dndPortal.technologies[1]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=personal">
                             <Icon name="personal" variant="tag" />
-                            Personal project
+                            {dndPortal.type}
                         </a>
                     </li>
                 </ul>
@@ -53,16 +59,16 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Visit website
+                            {$copy.home.featured.visit}
                             <span aria-hidden="true">↗</span>
                         </a>
                     </li>
                     <li>
                         <a
                             class="text-link"
-                            href="/projects/dnd-portal"
+                            href={'/projects/' + dndPortal.slug}
                         >
-                            Story behind the development
+                            {$copy.home.featured.story}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -71,7 +77,7 @@
                             class="text-link"
                             href="/research?project=dnd-portal"
                         >
-                            Related research
+                            {$copy.home.featured.related}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -79,28 +85,27 @@
             </div>
             <figure class="media">
                 <img
-                    src="/images/projects/dnd-portal.webp"
-                    alt="Screenshot of the DND-Portal website"
+                    src={dndPortal.image}
+                    alt={$copy.home.featured.dnd.screenshotAlt}
                 />
                 <figcaption class="caption">
                     <div class="caption__meta">
                         <span>
-                            Screenshot of
+                            {$copy.home.featured.screenshotOf}
                             <a
                                 href="https://www.dnd-portal.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                dnd-portal.com
+                                {$copy.home.featured.dnd.domain}
                             </a>
                         </span>
                         <time datetime="2026-09-04">
-                            04 September 2026
+                            {$copy.home.featured.date}
                         </time>
                     </div>
                     <p>
-                        The DND-Portal interface showing the main campaign and
-                        worldbuilding environment.
+                        {$copy.home.featured.dnd.caption}
                     </p>
                 </figcaption>
             </figure>
@@ -108,31 +113,30 @@
         <article class="panel split split--reverse">
             <div class="stack">
                 <div class="logo-mark">
-                    <img src="/logos/antarctica-sc.svg" alt="Antarctica SC logo" />
+                    <img src={antarctica.logo} alt={antarctica.title + ' logo'} />
                 </div>
                 <span class="number" aria-hidden="true">02</span>
-                <h3 class="title">Antarctica SC</h3>
+                <h3 class="title">{antarctica.title}</h3>
                 <p class="description">
-                    A public-facing website created for Antarctica SC, focused on presenting
-                    information clearly through a modern and accessible web experience.
+                    {$copy.home.featured.antarctica.description}
                 </p>
                 <ul class="tags" aria-label="Project characteristics">
                     <li>
                         <a href="/projects?filter=web-development">
                             <Icon name="web" variant="tag" />
-                            Web development
+                            {antarctica.technologies[0]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=responsive-design">
                             <Icon name="responsive" variant="tag" />
-                            Responsive design
+                            {antarctica.technologies[1]}
                         </a>
                     </li>
                     <li>
                         <a href="/projects?filter=client-project">
                             <Icon name="client" variant="tag" />
-                            Client project
+                            {antarctica.type}
                         </a>
                     </li>
                 </ul>
@@ -144,16 +148,16 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Visit website
+                            {$copy.home.featured.visit}
                             <span aria-hidden="true">↗</span>
                         </a>
                     </li>
                     <li>
                         <a
                             class="text-link"
-                            href="/projects/antarctica-sc"
+                            href={'/projects/' + antarctica.slug}
                         >
-                            Story behind the development
+                            {$copy.home.featured.story}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -162,7 +166,7 @@
                             class="text-link"
                             href="/research?project=antarctica-sc"
                         >
-                            Related research
+                            {$copy.home.featured.related}
                             <span aria-hidden="true">→</span>
                         </a>
                     </li>
@@ -170,28 +174,27 @@
             </div>
             <figure class="media">
                 <img
-                    src="/images/projects/antarctica-sc.webp"
-                    alt="Screenshot of the Antarctica SC website"
+                    src={antarctica.image}
+                    alt={$copy.home.featured.antarctica.screenshotAlt}
                 />
                 <figcaption class="caption">
                     <div class="caption__meta">
                         <span>
-                            Screenshot of
+                            {$copy.home.featured.screenshotOf}
                             <a
                                 href="http://antarctica-sc.nl/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                antarctica-sc.nl
+                                {$copy.home.featured.antarctica.domain}
                             </a>
                         </span>
                         <time datetime="2026-09-04">
-                            04 September 2026
+                            {$copy.home.featured.date}
                         </time>
                     </div>
                     <p>
-                        The Antarctica SC website, showing the public-facing interface
-                        and visual identity of the project.
+                        {$copy.home.featured.antarctica.caption}
                     </p>
                 </figcaption>
             </figure>

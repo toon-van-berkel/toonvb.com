@@ -1,0 +1,39 @@
+.about-page {
+    &__intro { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 32px; align-items: center; }
+    &__intro .section__title { max-width: none; font-size: clamp(3.5rem, 5.2vw, 4.5rem); }
+    &__intro-copy, &__project-copy, &__narrow { max-width: none; }
+    &__body { max-width: none; margin-top: 24px;
+        p { margin: 0 0 18px; color: var(--color-baltic-blue); font-size: 1.08rem; line-height: 1.65; &:last-child { margin-bottom: 0; } }
+    }
+    &__portrait { width: min(100%, 320px); margin: 0; justify-self: end; img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; border-radius: 20px; } }
+    &__story-grid { display: block; width: 100%; }
+    &__story-grid .section__title { max-width: none; }
+    &__story-grid .about-page__body,
+    &__project-copy .about-page__body { max-width: 760px; }
+    &__story-grid .about-page__body { margin-top: 24px; }
+    &__story, &__outside { padding-top: 64px; }
+    &__project { padding-top: 64px; &-inner { display: block; } &-header { width: 100%; } &-header .section__title { max-width: none; font-size: clamp(2.25rem, 4vw, 3rem); } &-copy { max-width: 760px; margin-top: 24px; } &-link { margin-top: 28px; } }
+    &__stats { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 28px; }
+    &__stat { display: flex; flex-direction: column; gap: 4px; min-width: 150px; padding-top: 12px; border-top: 1px solid rgba(12, 12, 13, 0.18); color: var(--color-dark); strong { font-size: clamp(2rem, 4vw, 2.5rem); line-height: 0.95; letter-spacing: -0.05em; } span { color: var(--color-dusk-blue); font-size: 0.9rem; } }
+    &__outside { padding-bottom: 24px; }
+    &__collaboration { padding-top: 64px; .section__header { max-width: 760px; } &-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } }
+    &__action { display: flex; flex-direction: column; align-items: flex-start; padding: 32px; border: 1px solid rgba(12, 12, 13, 0.1); border-radius: 16px;
+        .icon { width: 30px; height: 30px; margin-bottom: 20px; color: var(--color-primary); }
+        h3 { margin: 0; color: var(--color-dark); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1; letter-spacing: -0.04em; }
+        .about-page__body { flex: 1; }
+        &--accent { background: rgba(180, 186, 200, 0.28); }
+    }
+}
+
+@media (max-width: 800px) {
+    .about-page {
+        &__intro { grid-template-columns: 1fr; gap: 24px; }
+        &__intro .section__title { font-size: clamp(2.25rem, 10vw, 2.75rem); }
+        &__portrait { width: min(100%, 240px); justify-self: start; }
+        &__story-grid .about-page__body { margin-top: 20px; }
+        &__story, &__project, &__outside, &__collaboration { padding-top: 40px; }
+        &__stats { gap: 18px; margin-top: 24px; }
+        &__collaboration-grid { grid-template-columns: 1fr; gap: 16px; }
+        &__action { padding: 24px 20px; }
+    }
+}

@@ -1,0 +1,83 @@
+.language-switcher {
+    position: relative;
+    display: inline-flex;
+    color: var(--color-light);
+
+    &__trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 62px;
+        padding: 7px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.08);
+        color: inherit;
+        font: inherit;
+        font-size: 0.78rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: border-color 160ms ease, background-color 160ms ease;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--color-primary);
+            background: rgba(47, 155, 255, 0.16);
+        }
+    }
+
+    &__chevron {
+        width: 7px;
+        height: 7px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        transition: transform 160ms ease;
+    }
+
+    &--open &__chevron {
+        transform: translateY(2px) rotate(225deg);
+    }
+
+    &__menu {
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 8px);
+        z-index: 20;
+        min-width: 100%;
+        padding: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 9px;
+        background: rgba(9, 20, 34, 0.96);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    &__option {
+        display: block;
+        width: 100%;
+        padding: 7px 9px;
+        border: 0;
+        border-radius: 6px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.72);
+        font: inherit;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover,
+        &:focus-visible,
+        &--selected {
+            background: rgba(47, 155, 255, 0.16);
+            color: var(--color-light);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .language-switcher__trigger,
+    .language-switcher__chevron {
+        transition: none;
+    }
+}

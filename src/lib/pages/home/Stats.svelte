@@ -1,4 +1,8 @@
-<section class="section" aria-labelledby="stats-title">
+<script lang="ts">
+    import { reveal } from '$lib/utils/reveal';
+</script>
+
+<section use:reveal class="section" aria-labelledby="stats-title">
     <header class="section__header">
         <p class="section__eyebrow">By the numbers</p>
         <h2 class="section__title" id="stats-title">
@@ -11,7 +15,7 @@
             <span class="stat__label">Years coding</span>
         </div>
         <div class="stat">
-            <strong class="stat__value">950K+</strong>
+            <strong class="stat__value">1.12M+</strong>
             <span class="stat__label">Lines coded</span>
         </div>
         <div class="stat">

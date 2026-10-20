@@ -1,9 +1,11 @@
 <script lang="ts">
     import { url } from '$lib/utils/url';
-    import Icon from '$lib/components/icon/Icon.svelte';
+    import Card from '$lib/components/cards/Card.svelte';
+    import { reveal } from '$lib/utils/reveal';
 </script>
 
 <section
+    use:reveal
     class="section"
     aria-labelledby="playground-title"
 >
@@ -26,101 +28,11 @@
     </header>
 
     <div class="grid grid--3">
-        <article class="card">
-            <Icon name="experiment" />
+        <Card number="01" icon="experiment" meta="Experiments" title="Try something new" text="Small experiments where I test technologies, interactions or ideas without needing them to become a complete product." href={url('/playground/experiments')} linkLabel="View experiments" />
 
-            <span
-                class="card__number"
-                aria-hidden="true"
-            >
-                01
-            </span>
+        <Card number="02" icon="prototype" meta="Prototypes" title="Build it before overthinking it" text="Quick concepts and prototypes used to find out whether an idea actually works before turning it into something bigger." href={url('/playground/prototypes')} linkLabel="View prototypes" />
 
-            <p class="card__meta">
-                Experiments
-            </p>
-
-            <h3 class="card__title">
-                Try something new
-            </h3>
-
-            <p class="card__text">
-                Small experiments where I test technologies, interactions
-                or ideas without needing them to become a complete product.
-            </p>
-
-            <a
-                class="text-link"
-                href={url('/playground/experiments')}
-            >
-                View experiments
-                <span aria-hidden="true">→</span>
-            </a>
-        </article>
-
-        <article class="card">
-            <Icon name="prototype" />
-
-            <span
-                class="card__number"
-                aria-hidden="true"
-            >
-                02
-            </span>
-
-            <p class="card__meta">
-                Prototypes
-            </p>
-
-            <h3 class="card__title">
-                Build it before overthinking it
-            </h3>
-
-            <p class="card__text">
-                Quick concepts and prototypes used to find out whether an
-                idea actually works before turning it into something bigger.
-            </p>
-
-            <a
-                class="text-link"
-                href={url('/playground/prototypes')}
-            >
-                View prototypes
-                <span aria-hidden="true">→</span>
-            </a>
-        </article>
-
-        <article class="card">
-            <Icon name="idea" />
-
-            <span
-                class="card__number"
-                aria-hidden="true"
-            >
-                03
-            </span>
-
-            <p class="card__meta">
-                Weird ideas
-            </p>
-
-            <h3 class="card__title">
-                Because why not?
-            </h3>
-
-            <p class="card__text">
-                Ideas that probably did not need to exist, but were
-                interesting enough that I wanted to see how far they could go.
-            </p>
-
-            <a
-                class="text-link"
-                href={url('/playground/ideas')}
-            >
-                Explore weird ideas
-                <span aria-hidden="true">→</span>
-            </a>
-        </article>
+        <Card number="03" icon="idea" meta="Weird ideas" title="Because why not?" text="Ideas that probably did not need to exist, but were interesting enough that I wanted to see how far they could go." href={url('/playground/ideas')} linkLabel="Explore weird ideas" />
     </div>
 
     <div class="section__footer">
