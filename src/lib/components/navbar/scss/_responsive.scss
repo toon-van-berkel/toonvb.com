@@ -18,6 +18,12 @@
 			}
 		}
 
+		&::before {
+			background: rgb(9, 20, 34);
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+		}
+
 		&__links {
 			gap: 2px;
 		}

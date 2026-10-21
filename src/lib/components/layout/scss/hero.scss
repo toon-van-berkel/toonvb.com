@@ -228,17 +228,11 @@
         }
 
         &__media {
-            height: auto;
-            aspect-ratio: 3 / 2;
-            margin-top: 20px;
-
-            img { height: 100%; }
+            display: none;
         }
 
         &__dots {
-            margin-top: 12px;
-            margin-bottom: 0;
-            top: 0;
+            display: none;
         }
     }
 }

@@ -21,5 +21,6 @@
     :root {
         --surface-shape-depth: 18px;
         --navbar-height: 64px;
+        --page-content-offset: calc(env(safe-area-inset-top) + var(--navbar-height) + var(--surface-shape-depth) + 24px);
     }
 }
