@@ -18,12 +18,3 @@
 </div>
 <Footer />
 
-<style>
-    :global(.route-shell > main) {
-        padding-top: 24px;
-    }
-
-    :global(.route-shell > main > [data-handles-navbar-offset]) {
-        padding-top: 24px;
-    }
-</style>
