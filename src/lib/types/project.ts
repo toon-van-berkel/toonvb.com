@@ -15,6 +15,18 @@ export interface ProjectSection {
     body: string;
 }
 
+export interface ProjectFeature {
+    title: string;
+    body: string;
+}
+
+export interface ProjectCaseStudy {
+    overview: { title: string; paragraphs: readonly string[] };
+    features: { title: string; lead: string; items: readonly ProjectFeature[] };
+    details?: { title: string; paragraphs: readonly string[]; columns?: readonly ProjectFeature[] };
+    highlight: { title: string; paragraphs: readonly string[] };
+}
+
 export interface DndPortalFeature {
     icon: 'prototype' | 'personal' | 'responsive';
     title: string;
@@ -41,7 +53,10 @@ export interface ProjectContent {
     type: string;
     status: string;
     summary: string;
+    intro?: readonly string[];
     sections?: readonly ProjectSection[];
+    caseStudy?: ProjectCaseStudy;
+    closing?: { title: string; paragraphs: readonly string[]; cta: string };
     dndPortal?: DndPortalDetail;
 }
 

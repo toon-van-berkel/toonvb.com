@@ -5,4 +5,5 @@ export interface PageMetadata {
     description: string;
     locale: Locale;
     image?: string;
+    noindex?: boolean;
 }

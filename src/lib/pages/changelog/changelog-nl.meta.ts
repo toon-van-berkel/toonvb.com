@@ -1,7 +1,7 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
 export const metadata = {
-    title: 'Changelog | Toon van Berkel',
-    description: 'Een overzicht van wijzigingen aan het portfolio van Toon van Berkel.',
+    title: 'Changelog: Updates van Toon van Berkel - toonvb.com portfolio',
+    description: 'Volg de ontwikkeling van toonvb.com en ontdek welke functies, ontwerpverbeteringen en technische experimenten Toon van Berkel heeft toegevoegd.',
     locale: 'nl'
 } satisfies PageMetadata;

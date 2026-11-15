@@ -11,6 +11,7 @@
 
 <svelte:head>
     <link rel="canonical" href={`https://toonvb.com${target}`} />
+    <meta name="robots" content="noindex, follow" />
     <meta http-equiv="refresh" content={`0;url=${target}`} />
 </svelte:head>
 

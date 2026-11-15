@@ -1,7 +1,7 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
 export const metadata = {
-    title: 'Contact | Toon van Berkel',
-    description: 'Heb je een vraag, een projectidee of wil je gewoon praten over digitaal werk? Neem dan gerust contact op.',
+    title: 'Contact: Neem contact op met Toon van Berkel - toonvb.com portfolio',
+    description: 'Een website nodig of een interessant idee om samen uit te werken? Neem contact op met Toon van Berkel voor projecten en samenwerkingen.',
     locale: 'nl'
 } satisfies PageMetadata;

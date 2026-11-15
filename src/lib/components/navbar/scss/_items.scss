@@ -24,7 +24,7 @@
 				font-size: 0.95rem;
 				font-weight: 500;
 
-				color: rgba(255, 255, 255, 0.88);
+				color: var(--color-dusk-blue);
 
 				transition: color 150ms ease;
 			}
@@ -33,11 +33,11 @@
 				background: rgba(255, 255, 255, 0.08);
 
 				> a {
-					color: white;
+					color: var(--color-primary);
 				}
 
 				.nav__dropdown-toggle {
-					color: white;
+					color: var(--color-primary);
 				}
 			}
 		}

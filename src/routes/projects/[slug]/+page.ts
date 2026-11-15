@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { getProject } from '$lib/pages/projects/lookup';
 
 export function entries() {
-    return [{ slug: 'dnd-portal' }, { slug: 'antarctica-sc' }];
+    return [{ slug: 'dnd-portal' }, { slug: 'antarctica-sc' }, { slug: 'dnd-encounter-library' }];
 }
 
 export function load({ params }) {

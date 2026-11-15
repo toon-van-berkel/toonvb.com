@@ -5,13 +5,14 @@
 		| 'visual' | 'usability' | 'performance' | 'accessibility'
 		| 'sustainability' | 'experiment' | 'prototype' | 'idea'
 		| 'developer' | 'designer' | 'researcher' | 'overcomplicator'
-		| 'ts' | 'sv' | 'personal' | 'web' | 'responsive' | 'client';
+		| 'ts' | 'sv' | 'personal' | 'web' | 'responsive' | 'client'
+		| 'chevron-left' | 'chevron-right';
 
 	let {
 		name,
 		variant = 'card',
 		decorative = true
-	}: { name: IconName; variant?: 'card' | 'tag'; decorative?: boolean } = $props();
+	}: { name: IconName; variant?: 'card' | 'tag' | 'action'; decorative?: boolean } = $props();
 </script>
 
 <span class="icon icon--{variant} icon--{name}" aria-hidden={decorative} role={decorative ? undefined : 'img'}></span>

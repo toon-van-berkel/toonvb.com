@@ -5,12 +5,13 @@
     import { page as contactNl } from '$lib/pages/contact/contact-nl';
     import { metadata as metadataEn } from '$lib/pages/contact/contact-en.meta';
     import { metadata as metadataNl } from '$lib/pages/contact/contact-nl.meta';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const pages = { en: contactEn, nl: contactNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
 </script>
 
-<svelte:head><title>{metadata[$locale].title}</title><meta name="description" content={metadata[$locale].description} /></svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/contact/" />
 
 <main>
     <section class="section">

@@ -15,7 +15,7 @@
 <svelte:head>
     <title>{pages.title} | Toon van Berkel</title>
     <meta name="description" content={pages.description} />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, follow" />
 </svelte:head>
 
 <main class="status-page" data-page-header>

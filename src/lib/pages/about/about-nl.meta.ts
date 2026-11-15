@@ -1,7 +1,7 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
 export const metadata = {
-    title: 'Over mij | Toon van Berkel',
-    description: 'Over Toon van Berkel, creative software developer en CMGT-student uit de omgeving van Rotterdam.',
+    title: 'About: Maak kennis met Toon van Berkel - toonvb.com portfolio',
+    description: 'Leer Toon van Berkel kennen, developer, designer en student Creative Media & Game Technologies. Ontdek zijn achtergrond, interesses en creatieve aanpak.',
     locale: 'nl'
 } satisfies PageMetadata;

@@ -1,8 +1,7 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
-// Dutch metadata is not available yet; retain the current English description.
 export const metadata = {
-    title: 'Onderzoek | Toon van Berkel',
-    description: 'Research into visual design, usability, performance and accessibility by Toon van Berkel.',
+    title: 'Research: Onderzoek door Toon van Berkel - toonvb.com portfolio',
+    description: 'Verdiep je in het onderzoek van Toon van Berkel naar visueel ontwerp, gebruiksvriendelijkheid, webprestaties en digitale toegankelijkheid.',
     locale: 'nl'
 } satisfies PageMetadata;

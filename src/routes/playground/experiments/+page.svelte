@@ -3,15 +3,16 @@
     import { locale } from '$lib/i18n';
     import { page as playgroundEn } from '$lib/pages/playground/playground-en';
     import { page as playgroundNl } from '$lib/pages/playground/playground-nl';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
+    import { metadata as metadataEn } from '$lib/pages/playground/experiments/experiments-en.meta';
+    import { metadata as metadataNl } from '$lib/pages/playground/experiments/experiments-nl.meta';
 
     const pages = { en: playgroundEn, nl: playgroundNl } as const;
+    const metadata = { en: metadataEn, nl: metadataNl } as const;
     const experiments = $derived(pages[$locale].items.filter((item) => item.href && item.image));
 </script>
 
-<svelte:head>
-    <title>{$locale === 'nl' ? 'Experimenten | Playground' : 'Experiments | Playground'} | Toon van Berkel</title>
-    <meta name="description" content={$locale === 'nl' ? 'Interactieve experimenten en technische verkenningen.' : 'Interactive experiments and technical explorations.'} />
-</svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/playground/experiments/" />
 
 <main><section class="section experiments-page" data-page-header>
     <p class="section__eyebrow">Playground</p>

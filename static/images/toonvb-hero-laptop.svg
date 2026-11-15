@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="svgtitle svgdesc">
+<title id="svgtitle">A laptop creating ideas, in a minimalist geometric illustration</title>
+<desc id="svgdesc">A large illustrated laptop with a colorful code editor, set against a soft sage-to-peach arch with a golden sun and fine orbit lines.</desc>
+<defs>
+  <linearGradient id="sky" x1="0%" y1="10%" x2="100%" y2="80%">
+    <stop offset="0%" stop-color="#cdd5c8" />
+    <stop offset="44%" stop-color="#d9d3ba" />
+    <stop offset="100%" stop-color="#efae82" />
+  </linearGradient>
+  <linearGradient id="sun" x1="25%" y1="0%" x2="85%" y2="100%">
+    <stop offset="0%" stop-color="#fff1ca" />
+    <stop offset="100%" stop-color="#ffdaa0" />
+  </linearGradient>
+  <linearGradient id="screenFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#345366" />
+    <stop offset="100%" stop-color="#172e3d" />
+  </linearGradient>
+  <linearGradient id="screenGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1c3544" />
+    <stop offset="100%" stop-color="#0e2330" />
+  </linearGradient>
+  <linearGradient id="metalTop" x1="0%" y1="0%" x2="20%" y2="100%">
+    <stop offset="0%" stop-color="#6c8793" />
+    <stop offset="50%" stop-color="#496573" />
+    <stop offset="100%" stop-color="#2e4b5a" />
+  </linearGradient>
+  <linearGradient id="frontEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#506e7b" />
+    <stop offset="100%" stop-color="#284454" />
+  </linearGradient>
+  <clipPath id="archClip">
+    <path d="M 70 629 L 70 310 C 70 165 185 64 333 64 L 865 64 C 1007 64 1130 173 1130 319 L 1130 629 Z" />
+  </clipPath>
+  <clipPath id="screenClip">
+    <path d="M 348 174 Q 348 169 354 169 L 912 146 Q 918 146 919 153 L 938 456 Q 939 465 931 465 L 345 489 Q 339 489 339 482 Z" />
+  </clipPath>
+  <filter id="laptopShadow" x="-20%" y="-50%" width="140%" height="220%">
+    <feGaussianBlur stdDeviation="14" />
+  </filter>
+</defs>
+<rect width="1200" height="680" fill="#f7f6f2" />
+<!-- The warm archival-print landscape is deliberately reduced to a background motif. -->
+<g clip-path="url(#archClip)">
+  <rect x="70" y="64" width="1060" height="565" fill="url(#sky)" />
+  <path d="M 70 468 L 284 290 L 448 439 L 626 261 L 870 453 L 1130 264 L 1130 629 L 70 629 Z" fill="#b8c1b0" opacity=".40" />
+  <path d="M 70 580 L 286 394 L 473 557 L 735 328 L 938 492 L 1130 360 L 1130 629 L 70 629 Z" fill="#9dad9d" opacity=".23" />
+  <circle cx="804" cy="242" r="121" fill="url(#sun)" />
+  <circle cx="817" cy="241" r="183" fill="none" stroke="#f8f3e9" stroke-width="1.35" opacity=".75" />
+  <circle cx="286" cy="305" r="194" fill="none" stroke="#fbf7ef" stroke-width="1.4" opacity=".67" />
+  <circle cx="496" cy="302" r="255" fill="none" stroke="#f8f4eb" stroke-width="1.25" opacity=".54" />
+  <path d="M 60 474 C 270 273 400 185 652 167" fill="none" stroke="#f6f5ec" stroke-width="1.3" opacity=".38" />
+  <path d="M 60 629 H 1130" stroke="#fff9ed" stroke-width="2" opacity=".45" />
+</g>
+<!-- A handful of subtle drafting marks hint at creativity, without distracting from the laptop. -->
+<g fill="none" stroke="#f4eee2" stroke-width="2" opacity=".8">
+  <path d="M 190 199 h 31 M 205.5 184 v 30" />
+  <circle cx="1060" cy="225" r="7" />
+  <path d="M 1042 225 h -17" />
+</g>
+<!-- Ground shadow -->
+<ellipse cx="643" cy="588" rx="398" ry="25" fill="#5b696a" opacity=".22" filter="url(#laptopShadow)"/>
+<!-- The screen body: slightly off-axis for an editorial, crafted feel. -->
+<path d="M 327 163 Q 325 146 346 144 L 925 119 Q 944 118 947 138 L 969 476 Q 972 494 951 497 L 335 523 Q 316 523 315 502 Z" fill="url(#screenFrame)" stroke="#23404d" stroke-width="3" stroke-linejoin="round" />
+<path d="M 343 172 Q 343 166 351 166 L 916 142 Q 923 142 924 150 L 944 463 Q 944 470 937 470 L 342 495 Q 334 495 334 486 Z" fill="#0c202b" />
+<!-- Display and its UI -->
+<g clip-path="url(#screenClip)">
+  <rect x="330" y="139" width="625" height="365" fill="url(#screenGlass)" />
+  <path d="M 327 183 L 941 157 L 944 197 L 331 221 Z" fill="#244153" opacity=".90" />
+  <circle cx="364" cy="184" r="6.5" fill="#e79b83" />
+  <circle cx="386" cy="183" r="6.5" fill="#e3c382" />
+  <circle cx="408" cy="182" r="6.5" fill="#a9bea7" />
+  <text x="458" y="186" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="15" fill="#d0d9d9" opacity=".82" transform="rotate(-2.4 458 186)">portfolio / ideas.ts</text>
+  <path d="M 459 203 L 459 502" stroke="#7892a0" opacity=".25" stroke-width="1" />
+  <path d="M 344 228 L 455 223 L 468 494 L 340 499 Z" fill="#223b4a" opacity=".76" />
+  <path d="M 361 250 l 8 -9 l 8 9 l -8 9 Z" fill="none" stroke="#a9c4ce" stroke-width="2"/>
+  <g fill="#8da7ae" opacity=".67">
+    <rect x="385" y="246" width="48" height="4" rx="2" transform="rotate(-2.4 385 246)" />
+    <rect x="359" y="283" width="69" height="4" rx="2" transform="rotate(-2.4 359 283)" />
+    <rect x="368" y="310" width="49" height="4" rx="2" transform="rotate(-2.4 368 310)" />
+    <rect x="359" y="348" width="77" height="4" rx="2" transform="rotate(-2.4 359 348)" />
+    <rect x="368" y="376" width="54" height="4" rx="2" transform="rotate(-2.4 368 376)" />
+    <rect x="359" y="413" width="62" height="4" rx="2" transform="rotate(-2.4 359 413)" />
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" transform="rotate(-2.35 535 239)">
+    <g fill="#78939c" font-size="13">
+      <text x="478" y="245">01</text><text x="478" y="275">02</text><text x="478" y="305">03</text><text x="478" y="335">04</text><text x="478" y="365">05</text><text x="478" y="395">06</text><text x="478" y="425">07</text>
+    </g>
+    <text x="515" y="245"><tspan fill="#c6a1c5">const</tspan><tspan fill="#f2d6ad"> idea</tspan><tspan fill="#d5dfdf"> = {</tspan></text>
+    <text x="530" y="275"><tspan fill="#94bbca">curiosity</tspan><tspan fill="#d5dfdf">: </tspan><tspan fill="#dfb18d">true</tspan><tspan fill="#d5dfdf">,</tspan></text>
+    <text x="530" y="305"><tspan fill="#94bbca">design</tspan><tspan fill="#d5dfdf">: </tspan><tspan fill="#e5c69e">'intentional'</tspan><tspan fill="#d5dfdf">,</tspan></text>
+    <text x="530" y="335"><tspan fill="#94bbca">code</tspan><tspan fill="#d5dfdf">: </tspan><tspan fill="#e5c69e">'functional'</tspan><tspan fill="#d5dfdf">,</tspan></text>
+    <text x="515" y="365" fill="#d5dfdf">};</text>
+    <text x="515" y="417"><tspan fill="#c6a1c5">build</tspan><tspan fill="#d5dfdf">(</tspan><tspan fill="#f2d6ad">idea</tspan><tspan fill="#d5dfdf">);</tspan></text>
+  </g>
+  <path d="M 468 457 L 901 439" stroke="#b7d0d2" opacity=".2" />
+  <g font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#abc3c9" opacity=".70" transform="rotate(-2.35 485 471)">
+    <text x="485" y="477">●   All systems working</text>
+  </g>
+</g>
+<!-- Light bezel details -->
+<circle cx="634" cy="148" r="3" fill="#849ba7" opacity=".55" />
+<path d="M 328 503 L 960 478" stroke="#7a9aa5" opacity=".35" stroke-width="1.5" />
+<!-- Laptop keyboard deck -->
+<path d="M 317 505 L 968 478 L 1081 561 Q 1085 569 1065 574 L 220 597 Q 203 597 212 584 Z" fill="url(#metalTop)" stroke="#2e4c59" stroke-width="2" />
+
+<polygon points="392.8,523.4 424.3,522.2 419.9,527.5 387.6,528.7" fill="#2d4755" opacity=".75" />
+<polygon points="429.0,522.0 460.5,520.8 457.0,526.2 424.7,527.4" fill="#243c4c" opacity=".75" />
+<polygon points="465.2,520.6 496.7,519.4 494.1,524.8 461.8,526.0" fill="#243c4c" opacity=".75" />
+<polygon points="501.4,519.2 532.9,518.0 531.2,523.4 498.8,524.6" fill="#243c4c" opacity=".75" />
+<polygon points="537.5,517.8 569.1,516.6 568.2,522.0 535.9,523.2" fill="#243c4c" opacity=".75" />
+<polygon points="573.7,516.4 605.3,515.2 605.3,520.6 573.0,521.8" fill="#2d4755" opacity=".75" />
+<polygon points="609.9,515.0 641.5,513.8 642.4,519.3 610.1,520.5" fill="#243c4c" opacity=".75" />
+<polygon points="646.1,513.6 677.7,512.4 679.5,517.9 647.1,519.1" fill="#243c4c" opacity=".75" />
+<polygon points="682.3,512.2 713.9,511.0 716.5,516.5 684.2,517.7" fill="#243c4c" opacity=".75" />
+<polygon points="718.5,510.8 750.1,509.6 753.6,515.1 721.3,516.3" fill="#243c4c" opacity=".75" />
+<polygon points="754.7,509.4 786.2,508.2 790.7,513.8 758.4,515.0" fill="#2d4755" opacity=".75" />
+<polygon points="790.9,508.0 822.4,506.8 827.8,512.4 795.4,513.6" fill="#243c4c" opacity=".75" />
+<polygon points="827.1,506.6 858.6,505.4 864.8,511.0 832.5,512.2" fill="#243c4c" opacity=".75" />
+<polygon points="863.3,505.2 894.8,504.0 901.9,509.6 869.6,510.8" fill="#243c4c" opacity=".75" />
+<polygon points="385.8,530.6 418.4,529.4 414.0,534.8 380.6,535.9" fill="#243c4c" opacity=".75" />
+<polygon points="423.2,529.2 455.8,528.0 452.3,533.4 418.9,534.6" fill="#243c4c" opacity=".75" />
+<polygon points="460.6,527.9 493.2,526.7 490.5,532.1 457.2,533.2" fill="#243c4c" opacity=".75" />
+<polygon points="497.9,526.5 530.5,525.3 528.8,530.7 495.4,531.9" fill="#243c4c" opacity=".75" />
+<polygon points="535.3,525.1 567.9,523.9 567.1,529.4 533.7,530.5" fill="#2d4755" opacity=".75" />
+<polygon points="572.7,523.8 605.3,522.6 605.3,528.0 572.0,529.2" fill="#243c4c" opacity=".75" />
+<polygon points="610.1,522.4 642.7,521.2 643.6,526.7 610.2,527.8" fill="#243c4c" opacity=".75" />
+<polygon points="647.5,521.0 680.1,519.8 681.9,525.3 648.5,526.5" fill="#243c4c" opacity=".75" />
+<polygon points="684.9,519.6 717.5,518.4 720.2,524.0 686.8,525.1" fill="#243c4c" opacity=".75" />
+<polygon points="722.3,518.3 754.9,517.1 758.4,522.6 725.1,523.8" fill="#2d4755" opacity=".75" />
+<polygon points="759.6,516.9 792.2,515.7 796.7,521.3 763.3,522.4" fill="#243c4c" opacity=".75" />
+<polygon points="797.0,515.5 829.6,514.3 835.0,519.9 801.6,521.1" fill="#243c4c" opacity=".75" />
+<polygon points="834.4,514.2 867.0,513.0 873.2,518.6 839.9,519.7" fill="#243c4c" opacity=".75" />
+<polygon points="871.8,512.8 904.4,511.6 911.5,517.2 878.1,518.4" fill="#243c4c" opacity=".75" />
+<polygon points="378.8,537.8 412.4,536.6 408.0,542.0 373.6,543.1" fill="#243c4c" opacity=".75" />
+<polygon points="417.4,536.5 451.0,535.3 447.5,540.7 413.1,541.8" fill="#243c4c" opacity=".75" />
+<polygon points="456.0,535.1 489.6,534.0 487.0,539.4 452.6,540.5" fill="#243c4c" opacity=".75" />
+<polygon points="494.5,533.8 528.2,532.6 526.4,538.0 492.0,539.2" fill="#2d4755" opacity=".75" />
+<polygon points="533.1,532.4 566.8,531.3 565.9,536.7 531.5,537.9" fill="#243c4c" opacity=".75" />
+<polygon points="571.7,531.1 605.3,529.9 605.4,535.4 571.0,536.5" fill="#243c4c" opacity=".75" />
+<polygon points="610.3,529.8 643.9,528.6 644.8,534.1 610.4,535.2" fill="#243c4c" opacity=".75" />
+<polygon points="648.9,528.4 682.5,527.2 684.3,532.7 649.9,533.9" fill="#243c4c" opacity=".75" />
+<polygon points="687.4,527.1 721.1,525.9 723.8,531.4 689.4,532.6" fill="#2d4755" opacity=".75" />
+<polygon points="726.0,525.7 759.7,524.6 763.2,530.1 728.8,531.2" fill="#243c4c" opacity=".75" />
+<polygon points="764.6,524.4 798.3,523.2 802.7,528.8 768.3,529.9" fill="#243c4c" opacity=".75" />
+<polygon points="803.2,523.0 836.8,521.9 842.2,527.5 807.7,528.6" fill="#243c4c" opacity=".75" />
+<polygon points="841.8,521.7 875.4,520.5 881.6,526.1 847.2,527.3" fill="#243c4c" opacity=".75" />
+<polygon points="880.4,520.4 914.0,519.2 921.1,524.8 886.7,526.0" fill="#2d4755" opacity=".75" />
+<polygon points="371.8,545.0 406.5,543.9 402.1,549.2 366.6,550.4" fill="#243c4c" opacity=".75" />
+<polygon points="411.6,543.7 446.3,542.6 442.8,547.9 407.3,549.1" fill="#243c4c" opacity=".75" />
+<polygon points="451.4,542.4 486.1,541.2 483.4,546.6 448.0,547.8" fill="#2d4755" opacity=".75" />
+<polygon points="491.1,541.1 525.8,539.9 524.1,545.3 488.6,546.5" fill="#243c4c" opacity=".75" />
+<polygon points="530.9,539.8 565.6,538.6 564.7,544.0 529.3,545.2" fill="#243c4c" opacity=".75" />
+<polygon points="570.7,538.4 605.4,537.3 605.4,542.8 569.9,543.9" fill="#243c4c" opacity=".75" />
+<polygon points="610.5,537.1 645.2,536.0 646.1,541.5 610.6,542.6" fill="#243c4c" opacity=".75" />
+<polygon points="650.2,535.8 684.9,534.7 686.7,540.2 651.3,541.3" fill="#2d4755" opacity=".75" />
+<polygon points="690.0,534.5 724.7,533.4 727.4,538.9 691.9,540.0" fill="#243c4c" opacity=".75" />
+<polygon points="729.8,533.2 764.5,532.0 768.0,537.6 732.6,538.7" fill="#243c4c" opacity=".75" />
+<polygon points="769.6,531.9 804.3,530.7 808.7,536.3 773.2,537.4" fill="#243c4c" opacity=".75" />
+<polygon points="809.3,530.6 844.0,529.4 849.4,535.0 813.9,536.1" fill="#243c4c" opacity=".75" />
+<polygon points="849.1,529.2 883.8,528.1 890.0,533.7 854.6,534.8" fill="#2d4755" opacity=".75" />
+<polygon points="888.9,527.9 923.6,526.8 930.7,532.4 895.2,533.5" fill="#243c4c" opacity=".75" />
+
+<!-- A restrained trackpad adds physical dimension to the simplified keyboard. -->
+<path d="M 534 562 L 713 556 L 733 577 L 522 584 Z" fill="#688490" opacity=".48" stroke="#9ab0b7" stroke-width="1.3" />
+<!-- A thin highlighted front edge gives the laptop a crisp silhouette. -->
+<path d="M 213 586 Q 214 598 234 600 L 1063 577 Q 1083 576 1082 562 L 1064 572 Z" fill="url(#frontEdge)" />
+<path d="M 545 591 L 729 585" stroke="#9fb2b7" opacity=".7" stroke-width="2.7" stroke-linecap="round" />
+</svg>

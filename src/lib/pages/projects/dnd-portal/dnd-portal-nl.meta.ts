@@ -1,9 +1,8 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
-// Dutch metadata is retained in English until an approved translation exists.
 export const metadata = {
-    title: 'D&D Portal Wiki | Projecten | Toon van Berkel',
-    description: 'Een groeiende D&D-wiki met personageopties, spelregels, homebrew en praktische hulpmiddelen.',
+    title: 'D&D Portal Wiki: Gebouwd door Toon van Berkel - toonvb.com portfolio',
+    description: 'Ontdek D&D Portal Wiki, een website van Toon van Berkel met informatie over personages, spelregels, homebrew en hulpmiddelen voor Dungeons & Dragons.',
     locale: 'nl',
-    image: '/images/projects/dnd-portal.webp'
+    image: '/images/projects/dnd-portal-wiki.webp'
 } satisfies PageMetadata;

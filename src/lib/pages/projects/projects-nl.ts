@@ -8,5 +8,5 @@ export const page = {
         description: 'Projects are where design, development and experimentation come together. Some started as small ideas that grew considerably beyond their original scope.',
         image: null
     },
-    projectOrder: ['dnd-portal', 'antarctica-sc']
+    projectOrder: ['dnd-portal', 'antarctica-sc', 'dnd-encounter-library']
 } satisfies ProjectsOverviewDefinition;

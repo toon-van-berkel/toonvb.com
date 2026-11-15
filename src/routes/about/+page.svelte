@@ -7,15 +7,13 @@
     import { metadata as metadataEn } from '$lib/pages/about/about-en.meta';
     import { metadata as metadataNl } from '$lib/pages/about/about-nl.meta';
     import { url } from '$lib/utils/url';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const pages = { en: aboutEn, nl: aboutNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
 </script>
 
-<svelte:head>
-    <title>{metadata[$locale].title}</title>
-    <meta name="description" content={metadata[$locale].description} />
-</svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/about/" />
 
 <main class="about-page">
     <section class="about-page__intro section" data-page-header aria-labelledby="about-title">

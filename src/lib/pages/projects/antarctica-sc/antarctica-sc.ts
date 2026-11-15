@@ -4,7 +4,7 @@ export const project = {
     slug: 'antarctica-sc',
     logo: '/logos/antarctica-sc.svg',
     image: '/images/projects/antarctica-sc.webp',
-    external: 'http://antarctica-sc.nl/',
+    external: 'https://antarctica-sc.nl',
     technologies: ['Web development', 'Responsive design'],
     category: 'web',
     projectType: 'client'

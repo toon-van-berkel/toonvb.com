@@ -1,9 +1,8 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
-// Dutch metadata is retained in English until an approved translation exists.
 export const metadata = {
-    title: 'Antarctica SC | Projects | Toon van Berkel',
-    description: 'A public-facing website focused on presenting information clearly through a modern and accessible web experience.',
+    title: 'Antarctica SC: Webdevelopment door Toon van Berkel - toonvb.com portfolio',
+    description: 'Bekijk het Antarctica SC-webproject van Toon van Berkel, met aandacht voor responsief ontwerp, overzichtelijke informatie en gebruiksgemak.',
     locale: 'nl',
     image: '/images/projects/antarctica-sc.webp'
 } satisfies PageMetadata;

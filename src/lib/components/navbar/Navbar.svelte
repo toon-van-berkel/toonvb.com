@@ -4,6 +4,7 @@
 	import { copy } from '$lib/i18n';
 	import { locale } from '$lib/i18n';
 	import { getSearchResults } from '$lib/search';
+	import Icon from '$lib/components/icon/Icon.svelte';
 	import {
 		closeNavbar,
 		toggleDropdown as getDropdownState,
@@ -121,7 +122,7 @@
 
 <nav class:nav--open={menuOpen} class="nav">
 	<a class="nav__brand" href="/" onclick={closeMenu}>
-		<img src="/toonvb-transparent_logo.svg" alt="" />
+		<img src="/toonvb-favicon-transparent.svg" alt="" />
 		<span class="nav__brand-name">Toon van Berkel</span>
 		<span class="nav__brand-domain">toonvb.com</span>
 	</a>
@@ -382,6 +383,7 @@
 		</div>
 		<a class="nav__cta" href="/contact" onclick={closeMenu}>
 			{$copy.navigation.contact}
+			<span class="nav__chevron" aria-hidden="true"><Icon name="chevron-right" variant="action" decorative /><Icon name="chevron-right" variant="action" decorative /></span>
 		</a>
 	</div>
 </nav>

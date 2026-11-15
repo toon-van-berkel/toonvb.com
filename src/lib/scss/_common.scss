@@ -14,10 +14,6 @@ html {
     scroll-padding-top: var(--page-content-offset);
 }
 
-main {
-    padding-top: var(--page-content-offset);
-}
-
 main:has(> [data-handles-navbar-offset]) {
     padding-top: 0;
 }

@@ -6,6 +6,7 @@
     import { page as playgroundNl } from '$lib/pages/playground/playground-nl';
     import { metadata as metadataEn } from '$lib/pages/playground/playground-en.meta';
     import { metadata as metadataNl } from '$lib/pages/playground/playground-nl.meta';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const pages = { en: playgroundEn, nl: playgroundNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
@@ -18,7 +19,7 @@
     const hasExperiment = (item: typeof pages.en.items[number]) => Boolean(item.href);
 </script>
 
-<svelte:head><title>{metadata[$locale].title}</title><meta name="description" content={metadata[$locale].description} /></svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/playground/" />
 
 <main><section class="section playground-overview" data-page-header>
     <SectionHeader pageHeader eyebrow="The playground" title="Things that exist because I wanted to know if they could." lead="Projects are work polished enough to present. The playground is where ideas get tested, stretched and occasionally overcomplicated." />

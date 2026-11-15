@@ -5,9 +5,10 @@
     import { page as changelogNl } from '$lib/pages/changelog/changelog-nl';
     import { metadata as metadataEn } from '$lib/pages/changelog/changelog-en.meta';
     import { metadata as metadataNl } from '$lib/pages/changelog/changelog-nl.meta';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const pages = { en: changelogEn, nl: changelogNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
 </script>
-<svelte:head><title>{metadata[$locale].title}</title><meta name="description" content={metadata[$locale].description} /></svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/changelog/" />
 <main><section class="section"><SectionHeader pageHeader eyebrow="An evolving portfolio" title="The site is part of the work." lead="Toonvb.com is a live project. This is where I keep track of changes that make it clearer, more useful and easier to maintain." /><div class="stack">{#each pages[$locale].entries as entry}<article class="panel"><time datetime={entry.date}>{entry.date}</time><h2 class="title">{entry.title}</h2><p class="description">{entry.description}</p></article>{/each}</div></section></main>

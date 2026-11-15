@@ -1,8 +1,7 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
-// Dutch metadata is retained in English until an approved translation exists.
 export const metadata = {
-    title: 'Projects | Toon van Berkel',
-    description: 'Projects, platforms and experiments built by Toon van Berkel.',
+    title: 'Projects: Wat Toon van Berkel bouwt - toonvb.com portfolio',
+    description: 'Ontdek websites, applicaties en creatieve projecten van Toon van Berkel. Bekijk de technieken, ontwerpkeuzes en ideeën achter zijn werk.',
     locale: 'nl'
 } satisfies PageMetadata;

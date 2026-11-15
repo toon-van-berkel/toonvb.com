@@ -5,17 +5,18 @@
     import ScrewViewer from '$lib/pages/playground/screw/ScrewViewer.svelte';
     import { page as en } from '$lib/pages/playground/screw/screw-en';
     import { page as nl } from '$lib/pages/playground/screw/screw-nl';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
+    import { metadata as metadataEn } from '$lib/pages/playground/screw/screw-en.meta';
+    import { metadata as metadataNl } from '$lib/pages/playground/screw/screw-nl.meta';
 
     const pages = { en, nl } as const;
+    const metadata = { en: metadataEn, nl: metadataNl } as const;
     const exampleParameters = [
         ['Shaft length', '34 mm'], ['Shaft diameter', '8 mm'], ['Thread pitch', '3.2 mm'], ['Head diameter', '14 mm'], ['Head height', '6 mm']
     ];
 </script>
 
-<svelte:head>
-    <title>{pages[$locale].title} | Toon van Berkel</title>
-    <meta name="description" content={pages[$locale].intro} />
-</svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/playground/experiments/parametric-screw/" />
 
 <main>
     <section class="section screw-page" data-page-header>

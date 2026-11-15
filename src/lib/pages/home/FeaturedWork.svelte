@@ -33,19 +33,19 @@
                 </p>
                 <ul class="tags" aria-label="Project technologies">
                     <li>
-                        <a href="/projects?filter=sveltekit">
+                        <a href="/projects?q=sveltekit">
                             <Icon name="sv" variant="tag" />
                             {dndPortal.technologies[0]}
                         </a>
                     </li>
                     <li>
-                        <a href="/projects?filter=typescript">
+                        <a href="/projects?q=typescript">
                             <Icon name="ts" variant="tag" />
                             {dndPortal.technologies[1]}
                         </a>
                     </li>
                     <li>
-                        <a href="/projects?filter=personal">
+                        <a href="/projects?type=personal">
                             <Icon name="personal" variant="tag" />
                             {dndPortal.type}
                         </a>
@@ -122,19 +122,19 @@
                 </p>
                 <ul class="tags" aria-label="Project characteristics">
                     <li>
-                        <a href="/projects?filter=web-development">
+                        <a href="/projects?q=web+development">
                             <Icon name="web" variant="tag" />
                             {antarctica.technologies[0]}
                         </a>
                     </li>
                     <li>
-                        <a href="/projects?filter=responsive-design">
+                        <a href="/projects?q=responsive+design">
                             <Icon name="responsive" variant="tag" />
                             {antarctica.technologies[1]}
                         </a>
                     </li>
                     <li>
-                        <a href="/projects?filter=client-project">
+                        <a href="/projects?type=client">
                             <Icon name="client" variant="tag" />
                             {antarctica.type}
                         </a>

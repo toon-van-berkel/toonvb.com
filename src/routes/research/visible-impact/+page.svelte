@@ -8,6 +8,7 @@
     import { content as contentNl } from '$lib/pages/research/visible-impact/visible-impact-nl';
     import { metadata as metadataEn } from '$lib/pages/research/visible-impact/visible-impact-en.meta';
     import { metadata as metadataNl } from '$lib/pages/research/visible-impact/visible-impact-nl.meta';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const content: Record<Locale, VisibleImpactResearchDefinition> = { en: contentEn, nl: contentNl };
     const metadata = { en: metadataEn, nl: metadataNl } as const;
@@ -23,10 +24,7 @@
     const hasResults = $derived(page.results.rows.length > 0 && page.results.columns.length > 0 || hasText(page.results.highlight) || hasText(page.results.analysis));
 </script>
 
-<svelte:head>
-    <title>{metadata[$locale].title}</title>
-    <meta name="description" content={metadata[$locale].description} />
-</svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/research/visible-impact/" noindex />
 
 <main class="visible-impact" data-research={research.slug}>
     {#if hasText(page.hero.title) || hasText(page.hero.lead) || hasText(page.hero.eyebrow)}

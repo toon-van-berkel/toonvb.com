@@ -9,6 +9,7 @@
     import { getResearchTopics } from '$lib/pages/research/lookup';
     import { researchUi } from '$lib/pages/research/ui';
     import { url } from '$lib/utils/url';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const pages = { en: researchEn, nl: researchNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
@@ -27,7 +28,7 @@
     }
 </script>
 
-<svelte:head><title>{metadata[$locale].title}</title><meta name="description" content={metadata[$locale].description} /></svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/research/" />
 
 <main><section class="section research-overview" data-page-header>
     <SectionHeader pageHeader eyebrow={pages[$locale].header.eyebrow ?? ''} title={pages[$locale].header.title} lead={pages[$locale].header.description} />

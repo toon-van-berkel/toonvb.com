@@ -12,6 +12,7 @@
     import { getProjects } from '$lib/pages/projects/lookup';
     import { projectUi } from '$lib/pages/projects/ui';
     import { url } from '$lib/utils/url';
+    import SeoHead from '$lib/components/seo/SeoHead.svelte';
 
     const pages = { en: projectsEn, nl: projectsNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
@@ -55,7 +56,7 @@
     }
 </script>
 
-<svelte:head><title>{metadata[$locale].title}</title><meta name="description" content={metadata[$locale].description} /></svelte:head>
+<SeoHead metadata={metadata[$locale]} path="/projects/" />
 
 <main><section class="section projects-overview">
     <SectionHeader pageHeader eyebrow={pages[$locale].header.eyebrow} title={pages[$locale].header.title} lead={pages[$locale].header.description} />

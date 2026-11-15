@@ -4,13 +4,13 @@
 		display: flex;
 		align-items: center;
 
-		gap: 12px;
-
 		flex-shrink: 0;
+
+		gap: 12px;
 
 		text-decoration: none;
 
-		color: var(--color-light);
+		color: var(--color-dusk-blue);
 
 		transition: color 150ms ease;
 
@@ -22,7 +22,6 @@
 		span {
 			font-size: 1.05rem;
 			font-weight: 600;
-
 			white-space: nowrap;
 		}
 

@@ -33,12 +33,12 @@
 {/if}
 
 <style>
-    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; max-width: 1400px; margin: 0 auto; padding: calc(var(--page-content-offset) + 12px) max(24px, calc((100vw - 1400px) / 2)) 0; color: var(--color-dusk-blue); font-size: .85rem; }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px 18px; width: min(100% - 48px, 1400px); margin: 0 auto; padding: calc(var(--page-content-offset) + 12px) 0 0; color: var(--color-dusk-blue); font-size: .85rem; }
     .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
     .breadcrumbs li { display: inline-flex; align-items: center; gap: 6px; }
     .breadcrumbs a { color: inherit; text-decoration: none; }
     .breadcrumbs a:hover, .breadcrumbs a:focus-visible { color: var(--color-primary); text-decoration: underline; }
     .breadcrumbs__back { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
     .breadcrumbs__separator { color: var(--color-pale-slate); }
-    @media (max-width: 800px) { .breadcrumbs { padding-right: 20px; padding-left: 20px; } }
+    @media (max-width: 650px) { .breadcrumbs { width: min(100% - 40px, 1400px); } }
 </style>

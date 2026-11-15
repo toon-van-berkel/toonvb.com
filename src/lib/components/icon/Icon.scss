@@ -21,6 +21,11 @@
 		height: 14px;
 	}
 
+	&--action {
+		width: 20px;
+		height: 20px;
+	}
+
 	&--visual { mask-image: url('/icons/eye.svg'); -webkit-mask-image: url('/icons/eye.svg'); }
 	&--usability { mask-image: url('/icons/cursor-click.svg'); -webkit-mask-image: url('/icons/cursor-click.svg'); }
 	&--performance { mask-image: url('/icons/dashboard.svg'); -webkit-mask-image: url('/icons/dashboard.svg'); }
@@ -39,4 +44,6 @@
 	&--web { mask-image: url('/icons/web.svg'); -webkit-mask-image: url('/icons/web.svg'); }
 	&--responsive { mask-image: url('/icons/responsive.svg'); -webkit-mask-image: url('/icons/responsive.svg'); }
 	&--client { mask-image: url('/icons/client.svg'); -webkit-mask-image: url('/icons/client.svg'); }
+	&--chevron-left { mask-image: url('/icons/chevron-left.svg'); -webkit-mask-image: url('/icons/chevron-left.svg'); }
+	&--chevron-right { mask-image: url('/icons/chevron-right.svg'); -webkit-mask-image: url('/icons/chevron-right.svg'); }
 }

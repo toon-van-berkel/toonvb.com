@@ -1,7 +1,7 @@
 import type { PageMetadata } from '$lib/types/metadata';
 
 export const metadata = {
-    title: 'About | Toon van Berkel',
-    description: 'About Toon van Berkel, a creative software developer and CMGT student from the Rotterdam area.',
+    title: 'About: Meet Toon van Berkel - toonvb.com portfolio',
+    description: 'Get to know Toon van Berkel, a developer, designer and Creative Media & Game Technologies student. Discover his background, interests and creative journey.',
     locale: 'en'
 } satisfies PageMetadata;

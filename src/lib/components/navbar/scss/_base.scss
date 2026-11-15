@@ -27,21 +27,18 @@
 		z-index: 0;
 		top: 0;
 		right: 0;
-		bottom: calc(-1 * var(--surface-shape-depth));
+		bottom: 0;
 		left: 0;
-		background: rgba(9, 20, 34, 0.72);
-		backdrop-filter: blur(10px) saturate(115%);
-		-webkit-backdrop-filter: blur(10px) saturate(115%);
-		clip-path: polygon(
-			0 0,
-			100% 0,
-			100% 100%,
-			calc(var(--surface-shape-position) + var(--surface-shape-transition)) 100%,
-			var(--surface-shape-position) calc(100% - var(--surface-shape-depth)),
-			0 calc(100% - var(--surface-shape-depth))
-		);
+		box-sizing: border-box;
+		background: var(--color-light);
+		border-bottom: 1px solid rgba(42, 76, 123, 0.18);
+		clip-path: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
 		pointer-events: none;
 	}
+
+	&::after { display: none; }
 
 	> * { position: relative; z-index: 1; }
 	}

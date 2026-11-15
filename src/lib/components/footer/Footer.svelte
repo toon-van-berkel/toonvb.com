@@ -13,7 +13,7 @@
                 aria-label="Toon van Berkel home"
             >
                 <img
-                    src={url('/toonvb-transparent_logo.svg')}
+                    src={url('/toonvb-favicon-transparent-contrast.svg')}
                     alt=""
                 />
 
