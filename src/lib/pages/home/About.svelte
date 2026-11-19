@@ -23,7 +23,7 @@
             </h2>
         </header>
 
-        <div class="split split--top">
+        <div class="split split--top about-home__split">
             <div class="stack">
                 <p class="description">
                     I’m <strong>Toon van Berkel</strong>, a developer and
@@ -90,12 +90,60 @@
                 </ul>
             </div>
 
-            <figure class="media media--top">
+            <figure class="media media--top about-home__photo">
                 <img
-                    src={url('/images/about/toon-workspace.jpg')}
-                    alt="Toon van Berkel working at a desk"
+                    src={url('/images/about/toon-van-berkel-camera.webp')}
+                    alt="Toon van Berkel photographing with a camera"
                 />
             </figure>
         </div>
     </article>
 </section>
+
+<style>
+    .about-home__photo {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+    }
+
+    .about-home__photo img {
+        position: relative;
+        width: 78%;
+        max-width: 78%;
+        height: 100%;
+        margin-left: auto;
+        object-fit: cover;
+        object-position: 49% 32%;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%, black 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 30%, black 100%);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+
+    .about-home__split {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: clamp(32px, 4vw, 64px);
+    }
+
+    @media (max-width: 800px) {
+        .about-home__photo {
+            aspect-ratio: 4 / 5;
+        }
+
+        .about-home__photo img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            object-position: 50% 32%;
+        }
+
+        .about-home__photo img {
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%, black 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 18%, black 100%);
+        }
+    }
+</style>

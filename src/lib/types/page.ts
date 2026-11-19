@@ -51,7 +51,15 @@ export interface ContactPageDefinition extends PageDefinition {
     email: string;
 }
 
-export interface PlaygroundItem {
+export interface PlaygroundCategory {
+    title: string;
+    description: string;
+    status: string;
+    href?: string;
+    icon?: import('$lib/components/icon/Icon.svelte').IconName;
+}
+
+export interface PlaygroundCreation {
     title: string;
     description: string;
     status: string;
@@ -63,7 +71,9 @@ export interface PlaygroundItem {
 }
 
 export interface PlaygroundPageDefinition extends PageDefinition {
-    items: readonly PlaygroundItem[];
+    categories: readonly PlaygroundCategory[];
+    creations: readonly PlaygroundCreation[];
+    creationsHeader: { eyebrow: string; title: string; description: string };
     emptyMessage: string;
 }
 

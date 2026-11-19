@@ -6,7 +6,8 @@ export const legacyRedirects = [
     { path: 'en-gb/Projects', target: '/projects/' },
     { path: 'en-gb/Research', target: '/research/' },
     { path: 'en-gb/Playground', target: '/playground/' },
-    { path: 'en-gb/Vacations/Mallorca-2026', target: '/about/travel/mallorca-2026/' }
+    { path: 'en-gb/Vacations/Mallorca-2026', target: '/about/travel/mallorca-2026/' },
+    { path: 'pages/cv.html', target: '/about/cv/' }
 ];
 
 if (import.meta.url === `file://${process.argv[1]?.replaceAll('\\', '/')}`) {

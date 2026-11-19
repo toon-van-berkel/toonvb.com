@@ -41,6 +41,12 @@
 .cv-list__item { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--cv-gold-soft); }
 .cv-list__item:last-child { border-bottom: 0; padding-bottom: 0; }
 .cv-list__item:first-child { padding-top: 0; }
+.cv-list__item--link { padding: 0; }
+.cv-list__item-content { display: contents; }
+.cv-list__item-link { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 13px 0; color: inherit; text-decoration: none; }
+.cv-list__item--link .cv-list__item-link { grid-column: 1 / -1; }
+.cv-list__item--link:first-child .cv-list__item-link { padding-top: 0; }
+.cv-list__item-link:hover h3, .cv-list__item-link:focus-visible h3 { color: var(--cv-gold); text-decoration: underline; text-underline-offset: 3px; }
 .cv-list__icon { color: var(--cv-gold); padding-top: 3px; }
 .cv-list__icon .icon { width: 25px; height: 25px; }
 .cv-list__item h3 { margin: 0; font: 700 1.15rem/1.2 Georgia, serif; }
@@ -59,6 +65,29 @@
 .cv-skills__group-title { margin: 14px 0 8px; color: var(--cv-ink); font: 700 1rem/1.2 Georgia, serif; }
 .cv-skills__group-title:first-of-type { margin-top: 0; }
 .cv-skills li { padding: 8px 11px; border: 1px solid var(--cv-gold-soft); background: rgba(255,255,255,.28); font-size: .94rem; }
+.cv-skills li { display: inline-flex; align-items: center; gap: 7px; }
+.cv-skills li .icon--sv { color: #ff3e00; }
+.cv-skills li .icon--ts { color: #3178c6; }
+.cv-skills li .icon--developer { color: #172a46; }
+.cv-skills li .icon--personal { color: #24292f; }
+.cv-skills li .icon--web { color: #b88624; }
+.cv-skills li .icon--javascript { color: #f0db4f; }
+.cv-skills li .icon--php { color: #777bb3; }
+.cv-skills li .icon--laravel { color: #ff2d20; }
+.cv-skills li .icon--html { color: #e34f26; }
+.cv-skills li .icon--css { color: #1572b6; }
+.cv-skills li .icon--scss { color: #c6538c; }
+.cv-skills li .icon--git { color: #f05032; }
+.cv-skills li .icon--github { color: #24292f; }
+.cv-skills li .icon--sqlite { color: #003b57; }
+.cv-skill-brand-icon { display: block; width: 14px; height: 14px; object-fit: contain; }
+.cv-list__icon .icon--scouting-nederland { color: #007a3d; }
+.cv-list__icon .icon--hat-wizard { color: #e67e00; }
+.cv-list__brand-icon { display: block; width: 25px; height: 25px; object-fit: contain; }
+.cv-list__icon .icon--first-aid { color: #b85c00; }
+.cv-list__item--featured .cv-list__item-link,
+.cv-list__item--featured .cv-list__item-content { grid-template-columns: 44px minmax(0, 1fr); }
+.cv-list__item--featured .cv-list__icon .icon { width: 32px; height: 32px; }
 .cv-community { grid-column: 1 / -1; }
 .cv-community .cv-list { grid-template-columns: repeat(2, minmax(0, 1fr)); display: grid; column-gap: 28px; }
 

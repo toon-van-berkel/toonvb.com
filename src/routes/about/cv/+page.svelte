@@ -71,17 +71,17 @@
             <div class="cv-column">
                 <section class="cv-panel" aria-labelledby="cv-education">
                     <h2 class="cv-panel__title" id="cv-education">{content.education.title}</h2>
-                    <ul class="cv-list">{#each content.education.items as item}<li class="cv-list__item"><span class="cv-list__icon"><Icon name={item.icon ?? 'prototype'} variant="tag" /></span><div><h3>{item.title}</h3>{#if item.subtitle}<p>{item.subtitle}</p>{/if}{#if item.period}<small>{item.period}</small>{/if}{#if item.body}<p>{item.body}</p>{/if}</div></li>{/each}</ul>
+                    <ul class="cv-list">{#each content.education.items as item}<li class="cv-list__item"><span class="cv-list__icon">{#if item.icon === 'hogeschool-rotterdam'}<img class="cv-list__brand-icon" src="/icons/hogeschool-rotterdam.svg" alt="" aria-hidden="true" />{:else}<Icon name={item.icon ?? 'prototype'} variant="tag" />{/if}</span><div><h3>{item.title}</h3>{#if item.subtitle}<p>{item.subtitle}</p>{/if}{#if item.period}<small>{item.period}</small>{/if}{#if item.body}<p>{item.body}</p>{/if}</div></li>{/each}</ul>
                 </section>
 
                 <section class="cv-panel" aria-labelledby="cv-skills">
                     <h2 class="cv-panel__title" id="cv-skills">{content.skills.title}</h2>
-                    {#each content.skills.groups as group}<h3 class="cv-skills__group-title">{group.title}</h3><ul class="cv-skills">{#each group.items as skill}<li>{skill}</li>{/each}</ul>{/each}
+                    {#each content.skills.groups as group}<h3 class="cv-skills__group-title">{group.title}</h3><ul class="cv-skills">{#each group.items as skill}<li>{#if typeof skill === 'object'}{#if skill.icon === 'sqlite'}<img class="cv-skill-brand-icon" src="/icons/sqlite.svg" alt="" aria-hidden="true" />{:else}<Icon name={skill.icon} variant="tag" />{/if}<span>{skill.label}</span>{:else}{skill}{/if}</li>{/each}</ul>{/each}
                 </section>
 
                 <section class="cv-panel" aria-labelledby="cv-certificates">
                     <h2 class="cv-panel__title" id="cv-certificates">{content.certificates.title}</h2>
-                    <ul class="cv-list">{#each content.certificates.items as item}<li class="cv-list__item"><span class="cv-list__icon"><Icon name={item.icon ?? 'accessibility'} variant="tag" /></span><div><h3>{item.title}</h3>{#if item.subtitle}<p>{item.subtitle}</p>{/if}{#if item.period}<small>{item.period}</small>{/if}</div></li>{/each}</ul>
+                    <ul class="cv-list">{#each content.certificates.items as item}<li class:cv-list__item--link={item.href} class:cv-list__item--featured={item.featured} class="cv-list__item"><svelte:element this={item.href ? 'a' : 'div'} href={item.href ? url(item.href) : undefined} class={item.href ? 'cv-list__item-link' : 'cv-list__item-content'}><span class="cv-list__icon"><Icon name={item.icon ?? 'accessibility'} variant="tag" /></span><div><h3>{item.title}</h3>{#if item.subtitle}<p>{item.subtitle}</p>{/if}{#if item.period}<small>{item.period}</small>{/if}</div></svelte:element></li>{/each}</ul>
                 </section>
 
                 <section class="cv-panel" aria-labelledby="cv-languages">
@@ -92,7 +92,7 @@
 
             <section class="cv-panel cv-community" aria-labelledby="cv-community">
                 <h2 class="cv-panel__title" id="cv-community">{content.community.title}</h2>
-                <ul class="cv-list">{#each content.community.items as item}<li class="cv-list__item"><span class="cv-list__icon"><Icon name="personal" variant="tag" /></span><div><h3>{item.title}</h3>{#if item.body}<p>{item.body}</p>{/if}</div></li>{/each}</ul>
+                <ul class="cv-list">{#each content.community.items as item}<li class="cv-list__item"><span class="cv-list__icon">{#if item.icon === 'scouting-nederland'}<img class="cv-list__brand-icon" src="/icons/scouting-nederland.svg" alt="" aria-hidden="true" />{:else}<Icon name={item.icon ?? 'personal'} variant="tag" />{/if}</span><div><h3>{item.title}</h3>{#if item.body}<p>{item.body}</p>{/if}</div></li>{/each}</ul>
             </section>
         </div>
     </div>

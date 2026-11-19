@@ -15,6 +15,8 @@ export interface CvEntry {
     body?: string;
     period?: string;
     icon?: IconName;
+    href?: string;
+    featured?: boolean;
 }
 
 export interface CvSection {
@@ -40,7 +42,7 @@ export interface CvPageDefinition {
     projects: { title: string; items: readonly CvProject[] };
     experience: { title: string; items: readonly CvEntry[] };
     education: { title: string; items: readonly CvEntry[] };
-    skills: { title: string; groups: readonly { title: string; items: readonly string[] }[] };
+    skills: { title: string; groups: readonly { title: string; items: readonly (string | { label: string; icon: IconName })[] }[] };
     certificates: { title: string; items: readonly CvEntry[] };
     languages: { title: string; items: readonly string[] };
     community: { title: string; items: readonly CvEntry[] };

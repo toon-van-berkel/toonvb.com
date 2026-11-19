@@ -14,21 +14,21 @@ export const page = {
         { title: 'Labolutions — IT & Communication', body: 'I contributed to IT and communication-related activities, including representing the organisation at an industry exhibition. The role gave me experience combining technical work with communication.' }
     ] },
     education: { title: 'Education', items: [
-        { title: 'Creative Media & Game Technologies (CMGT)', subtitle: 'Hogeschool Rotterdam', period: '2025–present', body: 'Combining programming, interaction design and research in practical creative technology projects.', icon: 'prototype' },
+        { title: 'Creative Media & Game Technologies (CMGT)', subtitle: 'Hogeschool Rotterdam', period: '2025–present', body: 'Combining programming, interaction design and research in practical creative technology projects.', icon: 'hogeschool-rotterdam' },
         { title: 'Software Developer — MBO Level 4', subtitle: 'Techniek College Rotterdam', period: '2023–2025', body: 'Completed an accelerated software development programme.', icon: 'developer' }
     ] },
     skills: { title: 'Skills', groups: [
-        { title: 'Development', items: ['SvelteKit', 'Svelte', 'TypeScript', 'JavaScript', 'PHP', 'Laravel', 'HTML', 'CSS', 'SCSS'] },
-        { title: 'Tools & data', items: ['Git', 'GitHub', 'SQLite'] },
+        { title: 'Development', items: [{ label: 'SvelteKit', icon: 'sv' }, { label: 'Svelte', icon: 'sv' }, { label: 'TypeScript', icon: 'ts' }, { label: 'JavaScript', icon: 'javascript' }, { label: 'PHP', icon: 'php' }, { label: 'Laravel', icon: 'laravel' }, { label: 'HTML', icon: 'html' }, { label: 'CSS', icon: 'css' }, { label: 'SCSS', icon: 'scss' }] },
+        { title: 'Tools & data', items: [{ label: 'Git', icon: 'git' }, { label: 'GitHub', icon: 'github' }, { label: 'SQLite', icon: 'sqlite' }] },
         { title: 'Design', items: ['UI/UX design', 'Responsive web development', 'Interaction design'] }
     ] },
     certificates: { title: 'Certificates & recognition', items: [
-        { title: 'First Aid (EHBO)', subtitle: 'Diploma Eerste Hulp · Het Oranje Kruis', period: 'Valid through April 2027', icon: 'accessibility' },
+        { title: 'First Aid (EHBO)', subtitle: 'Diploma Eerste Hulp · Het Oranje Kruis', period: 'Valid through April 2027', icon: 'first-aid', href: '/about/certificates/ehbo/', featured: true },
         { title: 'Ondernemers Challenge 2024', subtitle: 'Third place', icon: 'personal' }
     ] },
     languages: { title: 'Languages', items: ['Dutch', 'English'] },
     community: { title: 'Community & organisation', items: [
-        { title: 'Scouting volunteer', body: 'I help organise activities and support younger members. Scouting gives me opportunities to collaborate, take responsibility and turn plans into real experiences.' },
-        { title: 'Dungeon Master & D&D organiser', body: "I prepare sessions and stories, coordinate players and guide collaborative adventures. It's a creative way to practise planning, communication and improvisation." }
+        { title: 'Scouting volunteer', body: 'I help organise activities and support younger members. Scouting gives me opportunities to collaborate, take responsibility and turn plans into real experiences.', icon: 'scouting-nederland' },
+        { title: 'Dungeon Master & D&D organiser', body: "I prepare sessions and stories, coordinate players and guide collaborative adventures. It's a creative way to practise planning, communication and improvisation.", icon: 'hat-wizard' }
     ] }
 } satisfies CvPageDefinition;

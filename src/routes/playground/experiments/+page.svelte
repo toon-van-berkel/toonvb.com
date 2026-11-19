@@ -9,7 +9,7 @@
 
     const pages = { en: playgroundEn, nl: playgroundNl } as const;
     const metadata = { en: metadataEn, nl: metadataNl } as const;
-    const experiments = $derived(pages[$locale].items.filter((item) => item.href && item.image));
+    const experiments = $derived(pages[$locale].creations.filter((item) => item.href && item.image));
 </script>
 
 <SeoHead metadata={metadata[$locale]} path="/playground/experiments/" />
@@ -23,7 +23,7 @@
             <a class="experiment-card" href={experiment.href}>
                 {#if experiment.image}<div class="experiment-card__preview"><img src={experiment.image} alt={experiment.imageAlt ?? ''} /></div>{/if}
                 <div class="experiment-card__body">
-                    <div class="experiment-card__heading"><Icon name={experiment.icon ?? 'experiment'} variant="tag" /><span>{experiment.status}</span></div>
+                    <div class="experiment-card__heading"><Icon name="experiment" variant="tag" /><span>{experiment.status}</span></div>
                     <h2>{experiment.title}</h2><p>{experiment.description}</p>
                     {#if experiment.tags}<ul class="experiment-card__tags">{#each experiment.tags as tag}<li><Icon name={tag.icon} variant="tag" />{tag.label}</li>{/each}</ul>{/if}
                     <span class="experiment-card__cta">{$locale === 'nl' ? 'Bekijk experiment' : 'View experiment'} <span aria-hidden="true">↗</span></span>

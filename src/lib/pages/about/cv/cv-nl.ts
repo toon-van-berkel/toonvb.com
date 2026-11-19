@@ -14,21 +14,21 @@ export const page = {
         { title: 'Labolutions — IT & communicatie', body: 'Ik ondersteunde werkzaamheden op het gebied van IT en communicatie, waaronder het vertegenwoordigen van de organisatie op een vakbeurs. Daarbij combineerde ik technische werkzaamheden met communicatie.' }
     ] },
     education: { title: 'Opleiding', items: [
-        { title: 'Creative Media & Game Technologies (CMGT)', subtitle: 'Hogeschool Rotterdam', period: '2025–heden', body: 'Een combinatie van programmeren, interactieontwerp en onderzoek binnen praktische creatieve technologieprojecten.', icon: 'prototype' },
+        { title: 'Creative Media & Game Technologies (CMGT)', subtitle: 'Hogeschool Rotterdam', period: '2025–heden', body: 'Een combinatie van programmeren, interactieontwerp en onderzoek binnen praktische creatieve technologieprojecten.', icon: 'hogeschool-rotterdam' },
         { title: 'Software Developer — MBO niveau 4', subtitle: 'Techniek College Rotterdam', period: '2023–2025', body: 'Versneld afgeronde opleiding softwareontwikkeling.', icon: 'developer' }
     ] },
     skills: { title: 'Vaardigheden', groups: [
-        { title: 'Development', items: ['SvelteKit', 'Svelte', 'TypeScript', 'JavaScript', 'PHP', 'Laravel', 'HTML', 'CSS', 'SCSS'] },
-        { title: 'Tools & data', items: ['Git', 'GitHub', 'SQLite'] },
+        { title: 'Development', items: [{ label: 'SvelteKit', icon: 'sv' }, { label: 'Svelte', icon: 'sv' }, { label: 'TypeScript', icon: 'ts' }, { label: 'JavaScript', icon: 'javascript' }, { label: 'PHP', icon: 'php' }, { label: 'Laravel', icon: 'laravel' }, { label: 'HTML', icon: 'html' }, { label: 'CSS', icon: 'css' }, { label: 'SCSS', icon: 'scss' }] },
+        { title: 'Tools & data', items: [{ label: 'Git', icon: 'git' }, { label: 'GitHub', icon: 'github' }, { label: 'SQLite', icon: 'sqlite' }] },
         { title: 'Design', items: ['UI/UX-design', 'Responsive webdevelopment', 'Interactieontwerp'] }
     ] },
     certificates: { title: 'Certificaten & erkenning', items: [
-        { title: 'Eerste Hulp (EHBO)', subtitle: 'Diploma Eerste Hulp · Het Oranje Kruis', period: 'Geldig tot en met april 2027', icon: 'accessibility' },
+        { title: 'Eerste Hulp (EHBO)', subtitle: 'Diploma Eerste Hulp · Het Oranje Kruis', period: 'Geldig tot en met april 2027', icon: 'first-aid', href: '/about/certificates/ehbo/', featured: true },
         { title: 'Ondernemers Challenge 2024', subtitle: 'Derde plaats', icon: 'personal' }
     ] },
     languages: { title: 'Talen', items: ['Nederlands', 'Engels'] },
     community: { title: 'Community & organisatie', items: [
-        { title: 'Scoutingvrijwilliger', body: 'Ik help bij het organiseren van activiteiten en het begeleiden van jongere leden. Bij Scouting werk ik samen met anderen, neem ik verantwoordelijkheid en zet ik plannen om in activiteiten.' },
-        { title: 'Dungeon Master & D&D-organisator', body: 'Ik bereid sessies en verhalen voor, stem af met spelers en begeleid gezamenlijke avonturen. Een creatieve manier om te oefenen met plannen, communiceren en improviseren.' }
+        { title: 'Scoutingvrijwilliger', body: 'Ik help bij het organiseren van activiteiten en het begeleiden van jongere leden. Bij Scouting werk ik samen met anderen, neem ik verantwoordelijkheid en zet ik plannen om in activiteiten.', icon: 'scouting-nederland' },
+        { title: 'Dungeon Master & D&D-organisator', body: 'Ik bereid sessies en verhalen voor, stem af met spelers en begeleid gezamenlijke avonturen. Een creatieve manier om te oefenen met plannen, communiceren en improviseren.', icon: 'hat-wizard' }
     ] }
 } satisfies CvPageDefinition;

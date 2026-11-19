@@ -6,6 +6,9 @@
 		| 'sustainability' | 'experiment' | 'prototype' | 'idea'
 		| 'developer' | 'designer' | 'researcher' | 'overcomplicator'
 		| 'ts' | 'sv' | 'personal' | 'web' | 'responsive' | 'client'
+		| 'javascript' | 'php' | 'laravel' | 'html' | 'css' | 'scss'
+		| 'git' | 'github' | 'sqlite'
+		| 'hat-wizard' | 'scouting-nederland' | 'first-aid' | 'hogeschool-rotterdam'
 		| 'chevron-left' | 'chevron-right';
 
 	let {
